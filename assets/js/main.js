@@ -189,6 +189,44 @@
   window.addEventListener("load", initSwiper);
 
   /**
+   * Inicializar Swiper para la sección Alquilar
+   */
+  function initAlquilarSwiper() {
+    const alquilarSwiper = document.querySelector('.alquilar-swiper');
+    if (alquilarSwiper) {
+      new Swiper('.alquilar-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+      });
+    }
+  }
+
+  window.addEventListener('load', initAlquilarSwiper);
+
+  /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
   window.addEventListener('load', function(e) {

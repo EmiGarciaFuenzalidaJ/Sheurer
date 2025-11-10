@@ -1050,29 +1050,56 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
   transform: translateY(-2px);
 }
+
 /* ================================
    SECCIÓN PRE - TARJETAS PREMIUM
    ================================ */
 .Pre {
-  background-color: #F8F8F8; /* light-background */
-  padding: 80px 0;
+  background-color: #F8F8F8;
+  padding: 60px 0;
+  overflow: visible;
+}
+
+/* IMPORTANTE: Heredar los estilos globales del section-title */
+.Pre .section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
 }
 
 .Pre .section-title h2 {
   font-family: var(--heading-font);
   color: var(--heading-color);
   font-weight: 700;
-  font-size: 2.5rem;
-  margin-bottom: 16px;
-  letter-spacing: -0.02em;
+  font-size: 32px;
+  position: relative;
+}
+
+.Pre .section-title h2:before,
+.Pre .section-title h2:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: var(--accent-color);
+  display: inline-block;
+}
+
+.Pre .section-title h2:before {
+  margin: 0 15px 10px 0;
+}
+
+.Pre .section-title h2:after {
+  margin: 0 0 10px 15px;
 }
 
 .Pre .section-title p {
   color: var(--default-color);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: var(--default-font);
+  margin-bottom: 0;
 }
 
+/* Tarjetas grandes con imagen + info */
 .Pre .card-pre {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1083,6 +1110,11 @@ section,
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Reducir margen de la última tarjeta grande */
+.Pre .card-pre:last-of-type {
+  margin-bottom: 60px;
 }
 
 /* Alternar dirección */
@@ -1095,180 +1127,6 @@ section,
 }
 
 /* Contenedor de imagen */
-.Pre .card-pre .image-container {
-  position: relative;
-  width: 100%;
-  height: 450px;
-  grid-column: 1;
-  z-index: 1;
-}
-
-.Pre .card-pre img {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  object-fit: cover;
-  box-shadow: 0 10px 40px rgba(61, 46, 40, 0.15);
-}
-
-/* Tarjeta blanca superpuesta */
-.Pre .card-pre .info-box {
-  background: var(--surface-color);
-  padding: 50px 40px;
-  border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(61, 46, 40, 0.12);
-  position: relative;
-  z-index: 2;
-  margin-left: -80px;
-  grid-column: 2;
-}
-
-.Pre .card-pre:nth-child(even) .info-box {
-  margin-left: 0;
-  margin-right: -80px;
-}
-
-/* Logo en la tarjeta */
-.Pre .card-pre .info-box .logo {
-  max-width: 200px;
-  height: auto;
-  margin-bottom: 24px;
-  display: block;
-}
-
-.Pre .card-pre .info-box h3 {
-  font-family: var(--heading-font);
-  font-weight: 700;
-  color: var(--heading-color);
-  margin-bottom: 16px;
-  font-size: 1.5rem;
-  letter-spacing: -0.02em;
-}
-
-.Pre .card-pre .info-box p {
-  color: var(--default-color);
-  font-size: 1rem;
-  font-family: var(--default-font);
-  line-height: 1.7;
-  margin-bottom: 24px;
-}
-
-/* Botón con color accent */
-.Pre .card-pre .info-box a {
-  display: inline-block;
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-  font-weight: 600;
-  font-family: var(--nav-font);
-  text-decoration: none;
-  padding: 14px 32px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(221, 140, 17, 0.25);
-}
-
-.Pre .card-pre .info-box a:hover {
-  background-color: #C67A0E;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(221, 140, 17, 0.35);
-}
-
-/* Responsivo */
-@media (max-width: 992px) {
-  .Pre .card-pre {
-    grid-template-columns: 1fr;
-    margin-bottom: 60px;
-  }
-  
-  .Pre .card-pre .image-container {
-    grid-column: 1;
-    height: 350px;
-  }
-  
-  .Pre .card-pre .info-box {
-    grid-column: 1;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: -60px;
-  }
-  
-  .Pre .card-pre:nth-child(even) .info-box {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: -60px;
-  }
-  
-  .Pre .card-pre .info-box .logo {
-    max-width: 160px;
-  }
-}
-
-@media (max-width: 576px) {
-  .Pre {
-    padding: 60px 0;
-  }
-  
-  .Pre .section-title h2 {
-    font-size: 2rem;
-  }
-  
-  .Pre .card-pre .info-box {
-    padding: 35px 25px;
-  }
-  
-  .Pre .card-pre .info-box .logo {
-    max-width: 140px;
-  }
-  
-  .Pre .card-pre .info-box h3 {
-    font-size: 1.3rem;
-  }
-}
-/* ================================
-   SECCIÓN PRE - TARJETAS PREMIUM
-   ================================ */
-.Pre {
-  background-color: #F8F8F8; /* light-background */
-  padding: 80px 0;
-}
-
-.Pre .section-title h2 {
-  font-family: var(--heading-font);
-  color: var(--heading-color);
-  font-weight: 700;
-  font-size: 2.5rem;
-  margin-bottom: 16px;
-  letter-spacing: -0.02em;
-}
-
-.Pre .section-title p {
-  color: var(--default-color);
-  font-size: 1.1rem;
-  font-family: var(--default-font);
-}
-
-.Pre .card-pre {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 0;
-  margin-bottom: 80px;
-  position: relative;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Alternar dirección */
-.Pre .card-pre:nth-child(even) {
-  direction: rtl;
-}
-
-.Pre .card-pre:nth-child(even) > * {
-  direction: ltr;
-}
-
-/* Contenedor de imagen con hover */
 .Pre .card-pre .image-container {
   position: relative;
   width: 100%;
@@ -1295,7 +1153,7 @@ section,
   box-shadow: 0 15px 50px rgba(61, 46, 40, 0.25);
 }
 
-/* Tarjeta blanca superpuesta con efectos hover */
+/* Tarjeta blanca superpuesta */
 .Pre .card-pre .info-box {
   background: var(--surface-color);
   padding: 50px 40px;
@@ -1309,7 +1167,6 @@ section,
   overflow: hidden;
 }
 
-/* Efecto de brillo en tarjeta blanca */
 .Pre .card-pre .info-box::before {
   content: '';
   position: absolute;
@@ -1336,7 +1193,7 @@ section,
   margin-right: -80px;
 }
 
-/* Logo en la tarjeta con hover */
+/* Logo */
 .Pre .card-pre .info-box .logo {
   max-width: 200px;
   height: auto;
@@ -1371,7 +1228,7 @@ section,
   margin-bottom: 24px;
 }
 
-/* Botón con color accent y hover mejorado */
+/* Botón */
 .Pre .card-pre .info-box a {
   display: inline-block;
   background-color: var(--accent-color);
@@ -1387,7 +1244,6 @@ section,
   overflow: hidden;
 }
 
-/* Efecto ripple en botón de tarjetas grandes */
 .Pre .card-pre .info-box a::before {
   content: '';
   position: absolute;
@@ -1412,58 +1268,6 @@ section,
   box-shadow: 0 6px 16px rgba(221, 140, 17, 0.35);
 }
 
-/* Responsivo */
-@media (max-width: 992px) {
-  .Pre .card-pre {
-    grid-template-columns: 1fr;
-    margin-bottom: 60px;
-  }
-  
-  .Pre .card-pre .image-container {
-    grid-column: 1;
-    height: 350px;
-  }
-  
-  .Pre .card-pre .info-box {
-    grid-column: 1;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: -60px;
-  }
-  
-  .Pre .card-pre:nth-child(even) .info-box {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: -60px;
-  }
-  
-  .Pre .card-pre .info-box .logo {
-    max-width: 160px;
-  }
-}
-
-@media (max-width: 576px) {
-  .Pre {
-    padding: 60px 0;
-  }
-  
-  .Pre .section-title h2 {
-    font-size: 2rem;
-  }
-  
-  .Pre .card-pre .info-box {
-    padding: 35px 25px;
-  }
-  
-  .Pre .card-pre .info-box .logo {
-    max-width: 140px;
-  }
-  
-  .Pre .card-pre .info-box h3 {
-    font-size: 1.3rem;
-  }
-}
-
 /* ================================
    GRID DE 3 TARJETAS
    ================================ */
@@ -1471,7 +1275,8 @@ section,
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin-top: 80px;
+  margin-top: 0;
+  margin-bottom: 0;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -1488,13 +1293,11 @@ section,
   overflow: hidden;
 }
 
-/* Efecto hover elevado */
 .Pre .info-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 32px rgba(61, 46, 40, 0.16);
 }
 
-/* Efecto de brillo sutil en hover */
 .Pre .info-card::before {
   content: '';
   position: absolute;
@@ -1511,7 +1314,6 @@ section,
   left: 100%;
 }
 
-/* Icono/Ilustración */
 .Pre .info-card .card-icon {
   width: 100%;
   height: 220px;
@@ -1536,12 +1338,10 @@ section,
   object-fit: cover;
 }
 
-/* Contenido de la tarjeta con ESPACIADO GENEROSO */
 .Pre .info-card .card-content {
   padding: 40px 40px 45px 40px;
 }
 
-/* Título de la tarjeta */
 .Pre .info-card h3 {
   font-family: var(--heading-font);
   font-weight: 700;
@@ -1558,7 +1358,6 @@ section,
   color: var(--accent-color);
 }
 
-/* Descripción con espaciado generoso */
 .Pre .info-card p {
   font-family: var(--default-font);
   color: var(--default-color);
@@ -1569,7 +1368,6 @@ section,
   padding: 0 10px;
 }
 
-/* Botón de la tarjeta */
 .Pre .info-card .card-btn {
   display: inline-block;
   background-color: var(--accent-color);
@@ -1586,7 +1384,6 @@ section,
   font-size: 0.95rem;
 }
 
-/* Efecto de fondo en hover */
 .Pre .info-card .card-btn::before {
   content: '';
   position: absolute;
@@ -1613,10 +1410,49 @@ section,
 
 /* Responsivo - Tablets */
 @media (max-width: 992px) {
+  .Pre {
+    padding: 60px 0;
+  }
+
+  .Pre .section-title {
+    padding-bottom: 60px;
+  }
+
+  .Pre .card-pre {
+    grid-template-columns: 1fr;
+    margin-bottom: 60px;
+  }
+
+  .Pre .card-pre:last-of-type {
+    margin-bottom: 40px;
+  }
+  
+  .Pre .card-pre .image-container {
+    grid-column: 1;
+    height: 350px;
+  }
+  
+  .Pre .card-pre .info-box {
+    grid-column: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: -60px;
+  }
+  
+  .Pre .card-pre:nth-child(even) .info-box {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: -60px;
+  }
+  
+  .Pre .card-pre .info-box .logo {
+    max-width: 160px;
+  }
+  
   .Pre .cards-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-    margin-top: 60px;
+    margin-top: 0;
   }
   
   .Pre .info-card .card-icon {
@@ -1639,10 +1475,42 @@ section,
 
 /* Responsivo - Mobile */
 @media (max-width: 576px) {
+  .Pre {
+    padding: 60px 0;
+  }
+
+  .Pre .section-title {
+    padding-bottom: 60px;
+  }
+  
+  .Pre .section-title h2 {
+    font-size: 2rem;
+  }
+  
+  .Pre .card-pre {
+    margin-bottom: 50px;
+  }
+
+  .Pre .card-pre:last-of-type {
+    margin-bottom: 30px;
+  }
+  
+  .Pre .card-pre .info-box {
+    padding: 35px 25px;
+  }
+  
+  .Pre .card-pre .info-box .logo {
+    max-width: 140px;
+  }
+  
+  .Pre .card-pre .info-box h3 {
+    font-size: 1.3rem;
+  }
+  
   .Pre .cards-grid {
     grid-template-columns: 1fr;
     gap: 20px;
-    margin-top: 40px;
+    margin-top: 0;
     padding: 0 20px;
   }
   
@@ -1671,64 +1539,375 @@ section,
     padding: 13px 32px;
   }
 }
+
 /*--------------------------------------------------------------
-# About Section
+# Alquilar Section
 --------------------------------------------------------------*/
-.about .content h3 {
-  font-size: 2rem;
+/*--------------------------------------------------------------
+# Alquilar Section - Hover Optimizado
+--------------------------------------------------------------*/
+.alquilar {
+  background-color: #F8F8F8;
+  padding: 80px 0;
+}
+
+.alquilar .section-title h2 {
+  font-family: var(--heading-font);
+  color: var(--heading-color);
   font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
 }
 
-.about .content ul {
-  list-style: none;
-  padding: 0;
+.alquilar .section-title p {
+  color: var(--default-color);
+  font-size: 1.1rem;
+  font-family: var(--default-font);
 }
 
-.about .content ul li {
-  padding-bottom: 10px;
+/* Swiper Container */
+.alquilar-swiper {
+  width: 100%;
+  padding: 40px 0 60px 0;
+  position: relative;
 }
 
-.about .content ul i {
-  font-size: 1.25rem;
-  margin-right: 4px;
+/* Property Card - Base estable sin hover intrusivo */
+.alquilar .property-card {
+  background: var(--surface-color);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(61, 46, 40, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* Prevenir activación accidental del hover */
+  pointer-events: auto;
+}
+
+/* Hover suave y controlado - solo transform y shadow */
+.alquilar .property-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(61, 46, 40, 0.12);
+}
+
+/* ELIMINADO: Efecto de brillo que causaba parpadeo */
+/* Reemplazado por un overlay sutil y estable */
+.alquilar .property-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    transparent 0%, 
+    rgba(221, 140, 17, 0.03) 50%, 
+    transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.alquilar .property-card:hover::after {
+  opacity: 1;
+}
+
+/* Property Image - Sin zoom agresivo */
+.alquilar .property-image {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.alquilar .property-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  /* Mejor rendimiento */
+  will-change: transform;
+}
+
+/* Zoom más sutil y suave */
+.alquilar .property-card:hover .property-image img {
+  transform: scale(1.05);
+}
+
+/* Property Badge - Estable */
+.alquilar .property-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  font-family: var(--nav-font);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 8px 16px;
+  border-radius: 6px;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(221, 140, 17, 0.3);
+  /* Sin transiciones que puedan causar parpadeo */
+}
+
+/* Property Content */
+.alquilar .property-content {
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.alquilar .property-content h3 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  color: var(--heading-color);
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  transition: color 0.25s ease;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Cambio de color más sutil */
+.alquilar .property-card:hover h3 {
+  color: #C67A0E;
+}
+
+.alquilar .property-location {
+  font-family: var(--default-font);
+  color: var(--default-color);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 40px;
+}
+
+/* Property Features */
+.alquilar .property-features {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.alquilar .property-features .feature {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--default-font);
+  color: var(--default-color);
+  font-size: 0.9rem;
+}
+
+.alquilar .property-features .feature i {
+  font-size: 1.1rem;
+  color: var(--accent-color);
+  transition: transform 0.3s ease;
+}
+
+/* Animación sutil en los iconos al hover */
+.alquilar .property-card:hover .property-features .feature i {
+  transform: scale(1.1);
+}
+
+/* Property Footer */
+.alquilar .property-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.alquilar .property-price {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  color: var(--heading-color);
+  font-size: 1.4rem;
+  transition: color 0.25s ease;
+}
+
+.alquilar .property-card:hover .property-price {
   color: var(--accent-color);
 }
 
-.about .content p:last-child {
-  margin-bottom: 0;
-}
-
-.about .content .read-more {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  font-family: var(--heading-font);
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  padding: 12px 24px;
-  border-radius: 5px;
-  transition: 0.3s;
+/* Botón Ver Más - Rediseñado sin efectos complejos */
+.alquilar .btn-ver-mas {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 6px;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  font-weight: 600;
+  font-family: var(--nav-font);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(221, 140, 17, 0.2);
+  position: relative;
+  overflow: hidden;
 }
 
-.about .content .read-more i {
-  font-size: 18px;
-  margin-left: 5px;
-  line-height: 0;
-  transition: 0.3s;
+.alquilar .btn-ver-mas i {
+  font-size: 16px;
+  transition: transform 0.25s ease;
 }
 
-.about .content .read-more:hover {
-  background: color-mix(in srgb, var(--accent-color), black 20%);
-  padding-right: 19px;
+/* Efecto hover del botón más simple y estable */
+.alquilar .btn-ver-mas:hover {
+  background-color: #C67A0E;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(221, 140, 17, 0.3);
 }
 
-.about .content .read-more:hover i {
-  margin-left: 10px;
+.alquilar .btn-ver-mas:hover i {
+  transform: translateX(3px);
 }
 
+/* Swiper Navigation */
+.alquilar-swiper .swiper-button-prev,
+.alquilar-swiper .swiper-button-next {
+  width: 48px;
+  height: 48px;
+  background: var(--surface-color);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(61, 46, 40, 0.12);
+  transition: all 0.3s ease;
+}
+
+.alquilar-swiper .swiper-button-prev:after,
+.alquilar-swiper .swiper-button-next:after {
+  font-size: 20px;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.alquilar-swiper .swiper-button-prev:hover,
+.alquilar-swiper .swiper-button-next:hover {
+  background: var(--accent-color);
+  box-shadow: 0 6px 16px rgba(221, 140, 17, 0.3);
+}
+
+.alquilar-swiper .swiper-button-prev:hover:after,
+.alquilar-swiper .swiper-button-next:hover:after {
+  color: var(--contrast-color);
+}
+
+/* Swiper Pagination */
+.alquilar-swiper .swiper-pagination {
+  bottom: 20px;
+}
+
+.alquilar-swiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: var(--default-color);
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.alquilar-swiper .swiper-pagination-bullet-active {
+  background: var(--accent-color);
+  opacity: 1;
+  width: 32px;
+  border-radius: 6px;
+}
+
+/* ================================================
+   SOLUCIÓN ADICIONAL: Deshabilitar hover durante transición del swiper
+   ================================================ */
+
+/* Cuando el swiper está en transición, desactivar temporalmente los hovers */
+.alquilar-swiper.swiper-container-animating .property-card {
+  pointer-events: none;
+}
+
+.alquilar-swiper.swiper-container-animating .property-card:hover {
+  transform: none;
+  box-shadow: 0 4px 16px rgba(61, 46, 40, 0.08);
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+  .alquilar .property-image {
+    height: 240px;
+  }
+  
+  .alquilar .property-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .alquilar .property-price {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .alquilar {
+    padding: 60px 0;
+  }
+  
+  .alquilar .section-title h2 {
+    font-size: 2rem;
+  }
+  
+  .alquilar .property-image {
+    height: 220px;
+  }
+  
+  .alquilar .property-content {
+    padding: 24px 20px;
+  }
+  
+  .alquilar .property-features {
+    gap: 12px;
+  }
+  
+  .alquilar .property-features .feature {
+    font-size: 0.85rem;
+  }
+  
+  .alquilar-swiper .swiper-button-prev,
+  .alquilar-swiper .swiper-button-next {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ================================================
+   VARIANTE OPCIONAL: Hover solo con borde
+   Descomentar si prefieres un efecto aún más minimalista
+   ================================================ */
+
+/*
+.alquilar .property-card {
+  border: 2px solid transparent;
+}
+
+.alquilar .property-card:hover {
+  border-color: var(--accent-color);
+  transform: none;
+  box-shadow: 0 4px 16px rgba(61, 46, 40, 0.08);
+}
+*/
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
@@ -1765,7 +1944,7 @@ section,
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
-.services .service-item {
+/*.services .service-item {
   background-color: var(--surface-color);
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
   padding: 50px 30px;
@@ -1887,110 +2066,411 @@ section,
 }
 
 /*--------------------------------------------------------------
-# More Services Section
+# Banner Section
 --------------------------------------------------------------*/
-.more-services .card {
-  background-color: var(--surface-color);
-  color: var(--default-color);
-  padding: 30px;
-  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: 0.3s;
-  height: 100%;
-  border: 0;
+.banner-section {
+  background-color: #F8F8F8;
+  padding: 60px 0;
+  overflow: hidden;
 }
 
-.more-services .card img {
+.banner-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Banner Container */
+.banner-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(61, 46, 40, 0.15);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.banner-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 50px rgba(61, 46, 40, 0.25);
+}
+
+/* Link wrapper */
+.banner-link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+/* Banner Image */
+.banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.banner-link:hover .banner-image {
+  transform: scale(1.02);
+}
+
+/* Overlay sutil al hover */
+.banner-link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    transparent 0%, 
+    rgba(221, 140, 17, 0.05) 50%, 
+    transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.banner-link:hover::after {
+  opacity: 1;
+}
+
+/* ================================
+   RESPONSIVO
+   ================================ */
+
+/* Desktop grande */
+@media (min-width: 1400px) {
+  .banner-container {
+    max-width: 1300px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .banner-section {
+    padding: 50px 0;
+  }
+
+  .banner-container {
+    border-radius: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .banner-section {
+    padding: 40px 0;
+  }
+
+  .banner-section .container {
+    padding: 0 15px;
+  }
+
+  .banner-container {
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(61, 46, 40, 0.12);
+  }
+
+  /* Desactivar hover en mobile */
+  .banner-container:hover {
+    transform: none;
+  }
+
+  .banner-link:hover .banner-image {
+    transform: none;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 375px) {
+  .banner-section .container {
+    padding: 0 10px;
+  }
+
+  .banner-container {
+    border-radius: 10px;
+  }
+}
+/*--------------------------------------------------------------
+# Team Section - 3 Columnas
+--------------------------------------------------------------*/
+.team {
+  background-color: var(--background-color);
+  padding: 80px 0;
+}
+
+.team .section-title h2 {
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.team .section-title p {
+  color: var(--default-color);
+  font-size: 1.1rem;
+  font-family: var(--default-font);
+}
+
+/* Team Card */
+.team-card {
+  background: var(--surface-color);
+  border-radius: 16px;
   padding: 0;
-  transition: 0.5s;
+  box-shadow: 0 4px 16px rgba(61, 46, 40, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(61, 46, 40, 0.16);
+}
+
+/* Efecto overlay sutil */
+.team-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    transparent 0%, 
+    rgba(221, 140, 17, 0.03) 50%, 
+    transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.team-card:hover::after {
+  opacity: 1;
+}
+
+/* Inner Container - Layout Vertical para 3 columnas */
+.team-card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  padding: 32px 24px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Member Photo - Circular */
+.member-photo {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--accent-color);
+  box-shadow: 0 4px 12px rgba(221, 140, 17, 0.25);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.team-card:hover .member-photo {
+  border-color: #C67A0E;
+  box-shadow: 0 6px 20px rgba(221, 140, 17, 0.4);
+  transform: scale(1.05);
+}
+
+.member-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.team-card:hover .member-photo img {
   transform: scale(1.1);
 }
 
-.more-services .card h3 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-top: 30px;
-  margin-bottom: 18px;
-}
-
-.more-services .card:hover {
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
-}
-
-.more-services .card:hover img {
-  transform: scale(1);
-}
-
-/*--------------------------------------------------------------
-# Team Section
---------------------------------------------------------------*/
-.team {
-  --default-color: #ffffff;
-}
-
-.team .member {
-  text-align: center;
-  position: relative;
-  height: 100%;
-}
-
-.team .member .member-info {
-  opacity: 0;
+/* Member Details */
+.member-details {
+  flex: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  position: absolute;
-  inset: 0;
-  transition: 0.2s;
+  gap: 8px;
+  width: 100%;
 }
 
-.team .member .member-info-content {
-  margin-top: -50px;
-  transition: margin 0.2s;
-}
-
-.team .member:hover .member-info {
-  background: rgba(0, 0, 0, 0.6);
-  opacity: 1;
-  transition: 0.4s;
-}
-
-.team .member:hover .member-info-content {
-  margin-top: 0;
-  transition: margin 0.4s;
-}
-
-.team .member h4 {
-  color: var(--contrast-color);
+.member-details h4 {
+  font-family: var(--heading-font);
   font-weight: 700;
-  margin-bottom: 2px;
-  font-size: 18px;
+  color: var(--heading-color);
+  font-size: 1.3rem;
+  margin: 0;
+  letter-spacing: -0.02em;
+  transition: color 0.3s ease;
 }
 
-.team .member span {
-  font-style: italic;
-  display: block;
-  font-size: 13px;
-}
-
-.team .member .social {
-  margin-top: 15px;
-}
-
-.team .member .social a {
-  transition: 0.3s;
-  color: var(--default-color);
-}
-
-.team .member .social a:hover {
+.team-card:hover .member-details h4 {
   color: var(--accent-color);
 }
 
-.team .member .social i {
-  font-size: 18px;
-  margin: 0 2px;
+.member-position {
+  font-family: var(--default-font);
+  color: var(--default-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 8px;
 }
 
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+  justify-content: center;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #F8F8F8;
+  color: var(--heading-color);
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(221, 140, 17, 0.3);
+}
+
+/* ================================
+   RESPONSIVO
+   ================================ */
+
+/* Tablets grandes - 2 columnas */
+@media (max-width: 992px) {
+  .team {
+    padding: 60px 0;
+  }
+
+  .team .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .team-card-inner {
+    padding: 28px 22px;
+    gap: 14px;
+  }
+
+  .member-photo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .member-details h4 {
+    font-size: 1.2rem;
+  }
+
+  .member-position {
+    font-size: 0.85rem;
+  }
+
+  .social-links a {
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+  }
+}
+
+/* Tablets pequeños - 2 columnas */
+@media (max-width: 768px) {
+  .team-card-inner {
+    padding: 28px 20px;
+  }
+
+  .member-photo {
+    width: 85px;
+    height: 85px;
+  }
+
+  .member-details h4 {
+    font-size: 1.15rem;
+  }
+}
+
+/* Mobile - 1 columna */
+@media (max-width: 576px) {
+  .team {
+    padding: 60px 0;
+  }
+
+  .team .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .team-card-inner {
+    padding: 32px 24px;
+    gap: 16px;
+  }
+
+  .member-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .member-details h4 {
+    font-size: 1.25rem;
+  }
+
+  .member-position {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+
+  .social-links {
+    margin-top: 8px;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 375px) {
+  .team-card-inner {
+    padding: 28px 20px;
+  }
+
+  .member-photo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .member-details h4 {
+    font-size: 1.2rem;
+  }
+
+  .social-links a {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+}
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
