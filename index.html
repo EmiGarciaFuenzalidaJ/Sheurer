@@ -8,9 +8,16 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+<!-- Favicons principales -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+
+<!-- Manifest -->
+<link rel="manifest" href="assets/img/site.webmanifest">
+
+<!-- Favicon general (fallback) -->
+<link rel="shortcut icon" href="assets/img/favicon.ico">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -42,16 +49,14 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Comprar</a></li>
+          <li><a href="#hero" class="active">Inicio</a></li>
+          <li><a href="#vender">Comprar</a></li>
           <li><a href="#alquilar">Alquilar</a></li>
-          <li><a href="#vender">Vender</a></li>
-          <li><a href="#team">Nosotros</a></li>
           <li class="dropdown"><a href="#"><span>Más</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Tasaciones</a></li>
-              <li><a href="#">Administración</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contacto</a></li>
+              <li><a href="#tasaciones">Tasaciones</a></li>
+              <li><a href="#administracion">Administración</a></li>
+              <li><a href="#contacto">Contacto</a></li>
             </ul>
           </li>
         </ul>
@@ -72,10 +77,13 @@
           <img src="assets/img/hero-carousel/slide-one.jpg" alt="">
           <div class="carousel-container">
             <h2>Scheurer propiedades</h2>
-            <p>La propiedad que buscas está a tu alcance.</p>
+            <p>
+              El dónde, <strong>cambia todo...</strong>
+              <span style="display:block;">y nosotros estamos para acompañarte.</span>
+            </p>
             <div class="btn-group">
-              <a href="#featured-services" class="btn-get-started">Quiero comprar</a>
-              <a href="#about" class="btn-get-started">Quiero alquilar</a
+              <a href="#vender" class="btn-get-started">Quiero comprar</a>
+              <a href="#alquilar" class="btn-get-started">Quiero alquilar</a
             </div>
           </div>
         </div>
@@ -111,14 +119,18 @@
       </div>
 
     </section><!-- /Hero Section -->
+
     <!-- Pre Section -->
     <section id="Pre" class="Pre section">
       <div class="container">
 
         <!-- Título -->
         <div class="section-title" data-aos="fade-up">
-          <h2>Preventa Exclusiva</h2>
-          <p>Accedé antes que nadie a nuestras propiedades premium seleccionadas</p>
+          <h2>SOBRE NOSOTROS</h2>
+          <p>En Scheurer Propiedades no nos limitamos a mostrar inmuebles.
+            Nos enfocamos en brindar soluciones para cada cliente, entendiendo que detrás de cada consulta hay una necesidad concreta, un proyecto personal o una decisión estratégica.
+            Nuestro trabajo se centra en tres pilares:
+          </p>
         </div>
 
         <!-- Tarjeta 1 -->
@@ -127,10 +139,10 @@
             <img src="assets/img/Edi.jpg" alt="Propiedad exclusiva">
           </div>
           <div class="info-box">
-            <img src="assets/img/remax-logo.png" alt="Logo" class="logo">
-            <h3>Propiedades Premium</h3>
-            <p>Inmuebles seleccionados con altos estándares de calidad, ubicaciones estratégicas y diseños de vanguardia.</p>
-            <a href="#">Ver propiedades</a>
+            <h3>Quienes somos?</h3>
+            <p>Scheurer Propiedades nace en 2007, fundada por Mónica Scheurer, corredora inmobiliaria matriculada y quien, con una trayectoria marcada por la ética, la cercanía y el trabajo incansable, construyó los cimientos de una inmobiliaria reconocida por su compromiso y trato humano.
+            Lo que comenzó como un proyecto personal de Mónica, pronto se consolidó como una inmobiliaria, especialmente valorada por su profesionalismo, transparencia y dedicación en cada operación.
+            </p>
           </div>
         </div>
 
@@ -140,49 +152,61 @@
             <img src="assets/img/Edi.jpg" alt="Desarrollo inmobiliario">
           </div>
           <div class="info-box">
-            <img src="assets/img/remax-logo.png" alt="Logo" class="logo">
-            <h3>Próximos Desarrollos</h3>
-            <p>Oportunidades únicas en preventa con beneficios exclusivos y financiación a medida.</p>
-            <a href="#">Ver desarrollos</a>
+            <h3>Que hacemos?</h3>
+            <p>En Scheurer Propiedades no nos limitamos a mostrar inmuebles.
+            Nos enfocamos en brindar soluciones para cada cliente, entendiendo que detrás de cada consulta hay una necesidad concreta, un proyecto personal o una decisión estratégica.
+            Nuestro trabajo se centra en tres pilares:
+            1) Escuchar para entender
+            2) Acompañar todo el proceso
+            3) Resolver con eficiencia
+            </p>
           </div>
         </div>
 
-        <!-- Grid de 3 tarjetas -->
+        <div class="section-title" data-aos="fade-up">
+          <h2>A QUÉ NOS DEDICAMOS</h2>
+          <p></p>
+        </div>
+                <!-- Grid de 3 tarjetas -->
         <div class="cards-grid" data-aos="fade-up" data-aos-delay="300">
 
-          <!-- Tarjeta 1 -->
+          <!-- Tarjeta 1 - Urbano -->
           <div class="info-card">
             <div class="card-icon">
-              <img src="assets/img/1.jpg" alt="Franquicias">
+              <i class="bi bi-buildings"></i>
             </div>
             <div class="card-content">
-              <h3>Franquicias</h3>
-              <p>Hay una franquicia para vos también. Enterate cómo podés empezar.</p>
-              <a href="#" class="card-btn">Conocer más</a>
+              <h3>Urbano</h3>
+              <p>Tu próximo hogar en la ciudad.</p>
+                <a href="pages/propiedades.html" class="card-btn" target="_blank">Conocer más</a>
             </div>
           </div>
 
-          <!-- Tarjeta 2 -->
-          <div class="info-card">
-            <div class="card-icon">
-              <img src="assets/img/2.jpg" alt="Unite a la Red">
-            </div>
-            <div class="card-content">
-              <h3>Unite a la Red</h3>
-              <p>Súmate a una oficina adherida a la Red más exitosa del mundo.</p>
-              <a href="#" class="card-btn">Conocer más</a>
-            </div>
+          <!-- Tarjeta 2 - Rural -->
+        <div class="info-card">
+          <div class="card-icon">
+            <span class="svg-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                <path d="M56 59H38.811c-.881-4.113-1.625-8.782-2.221-13.93.302.026.6.06.911.06 4.095 0 7.69-2.457 8.99-6.056a8.06 8.06 0 0 0 .776-.138c2.205-.489 4.043-1.822 5.104-3.686C55.156 34.166 57 31.594 57 28.729c0-2.274-1.181-4.412-3.123-5.73A12.28 12.28 0 0 0 54 21.27c0-6.814-5.28-12.492-12.393-13.458C40.588 4.946 37.763 3 34.5 3c-1.967 0-3.852.732-5.256 2.025-5.257-.921-10.054 2.365-11.048 7.01-2.392.953-4.194 2.888-4.886 5.236-3.694.92-6.311 4.076-6.311 7.729 0 2.786 1.519 5.334 4.005 6.79.146 3.778 3.452 6.81 7.495 6.81h.021c1.226 3.904 4.528 6.9 8.711 7.966-.564 4.562-1.247 8.72-2.043 12.434H8a1 1 0 1 0 0 2h48a1 1 0 1 0 0-2ZM20.243 37.324a1 1 0 0 0-1.094-.767 5.555 5.555 0 0 1-.649.043c-3.032 0-5.5-2.274-5.5-5.07 0-.081.009-.161.016-.241a.999.999 0 0 0-.557-.986C10.325 29.258 9 27.226 9 25.001c0-2.888 2.229-5.366 5.3-5.895.407-.07.729-.384.811-.789.424-2.119 2.062-3.876 4.274-4.584a1 1 0 0 0 .686-.815c.478-3.447 3.672-6.047 7.43-6.047.607 0 1.212.07 1.849.215a.994.994 0 0 0 .954-.294c1.058-1.138 2.588-1.791 4.197-1.791 2.592 0 4.8 1.631 5.368 3.967a1 1 0 0 0 .88.759c6.415.593 11.252 5.556 11.252 11.544 0 .664-.066 1.332-.202 2.042a1 1 0 0 0 .503 1.065c1.665.911 2.699 2.578 2.699 4.353 0 2.129-1.464 4.042-3.643 4.76a.997.997 0 0 0-.583.505c-.751 1.511-2.188 2.6-3.946 2.99a5.732 5.732 0 0 1-1.11.146c-.443.01-.827.311-.943.739-.835 3.097-3.826 5.26-7.274 5.26a8.36 8.36 0 0 1-1.135-.083c-.061-.574-.122-1.146-.179-1.731a.994.994 0 0 1 .217-.72l6.198-7.754a2.491 2.491 0 0 0-.184-3.325l-.005-.005a2.498 2.498 0 0 0-3.171-.298L35.447 31.8a262.979 262.979 0 0 1-.423-10.834C34.995 19.331 33.639 18 32.002 18s-2.993 1.33-3.022 2.965a255.6 255.6 0 0 1-.269 7.981l-3.943-2.72a2.498 2.498 0 0 0-3.368 3.615l6.446 8.063a.998.998 0 0 1 .218.707 222.417 222.417 0 0 1-.59 5.953c-3.629-1.015-6.418-3.754-7.229-7.242ZM27.239 59c1.212-5.767 2.158-12.561 2.815-20.217a2.985 2.985 0 0 0-.647-2.126l-6.447-8.064a.496.496 0 0 1 .671-.719l5.417 3.735a1.001 1.001 0 0 0 1.566-.768c.233-4.231.327-7.687.364-9.841.01-.561.459-1 1.022-1s1.013.44 1.022 1c.039 2.275.16 6.948.536 12.68a1.002 1.002 0 0 0 1.561.761l5.247-3.574a.5.5 0 0 1 .632.059l.005.005a.495.495 0 0 1 .036.661l-6.199 7.755a2.983 2.983 0 0 0-.645 2.163c.639 6.542 1.501 12.418 2.565 17.489h-9.521Z"></path>
+              </svg>
+            </span>
           </div>
+          <div class="card-content">
+            <h3>Rural</h3>
+            <p>Potencia tu proyecto en tierra fértil.</p>
+                <a href="pages/propiedades.html" class="card-btn" target="_blank">Conocer más</a>
+          </div>
+        </div>
 
-          <!-- Tarjeta 3 -->
+          <!-- Tarjeta 3 - Industrial -->
           <div class="info-card">
             <div class="card-icon">
-              <img src="assets/img/3.jpg" alt="Encuesta de calidad">
+              <i class="bi bi-gear-wide-connected"></i>
             </div>
             <div class="card-content">
-              <h3>Encuesta de calidad</h3>
-              <p>Enviá tu opinión sobre la experiencia que viviste con un equipo de la Red RE/MAX</p>
-              <a href="#" class="card-btn">Completar encuesta</a>
+              <h3>Industrial</h3>
+              <p>Impulsá el crecimiento de tu empresa.</p>
+                <a href="pages/propiedades.html" class="card-btn" target="_blank">Conocer más</a>
             </div>
           </div>
 
@@ -190,6 +214,295 @@
 
       </div><!-- /container -->
     </section><!-- /Pre Section -->
+
+    <!-- Stats Section -->
+    <!--<section id="stats" class="stats section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Happy Clients</strong> <span>consequuntur quae</span></p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <!--<div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Projects</strong> <span>adipisci atque cum quia aut</span></p>
+            </div>
+          <!--</div><!-- End Stats Item -->
+
+          <!--<div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hours Of Support</strong> <span>aut commodi quaerat</span></p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <!--<div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hard Workers</strong> <span>rerum asperiores dolor</span></p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        <!--</div>
+
+      </div>-->
+
+    </section><!-- /Stats Section -->
+
+    <!-- Venta Section -->
+    <section id="vender" class="alquilar section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>En Venta</h2>
+        <p>Descubrí las mejores propiedades en venta seleccionadas para vos</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper alquilar-swiper">
+          <div class="swiper-wrapper">
+
+            <!-- Propiedad 1 -->
+            <div class="swiper-slide">
+              <div class="property-card">
+                <div class="property-image">
+                  <img src="assets/img/property1.jpg" alt="Casa en venta">
+                  <span class="property-badge">Alquiler</span>
+                </div>
+                <div class="property-content">
+                  <h3>Test Brasil - Villa Hipódromo</h3>
+                  <p class="property-location">1082, Villa Mercedes, Barrio República del Brasil</p>
+              
+                  <div class="property-features">
+                    <div class="feature">
+                      <i class="bi bi-house-door"></i>
+                      <span>3 hab</span>
+                    </div>
+                    <div class="feature">
+                      <i class="bi bi-droplet"></i>
+                      <span>1 baño</span>
+                    </div>
+                    <div class="feature">
+                      <i class="bi bi-rulers"></i>
+                      <span>125 m²</span>
+                    </div>
+                  </div>
+
+                  <div class="property-footer">
+                    <div class="property-price">USD 60,000</div>
+                    <a href="pages/propiedad.html" target="_blank" class="btn-ver-mas">Ver más<i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Propiedad 2 -->
+            <div class="swiper-slide">
+              <div class="property-card">
+                <div class="property-image">
+                  <img src="assets/img/property2.jpg" alt="Alquilo depto">
+                  <span class="property-badge">Alquiler</span>
+                </div>
+                <div class="property-content">
+                  <h3>ALQUILO DEPTO - GODOY CRUZ</h3>
+                  <p class="property-location">Álvarez Thomas 515, Godoy Cruz</p>
+              
+                  <div class="property-features">
+                    <div class="feature">
+                      <i class="bi bi-house-door"></i>
+                      <span>2 hab</span>
+                    </div>
+                    <div class="feature">
+                      <i class="bi bi-droplet"></i>
+                      <span>1 baño</span>
+                    </div>
+                    <div class="feature">
+                      <i class="bi bi-rulers"></i>
+                      <span>264 m²</span>
+                    </div>
+                  </div>
+
+                  <div class="property-footer">
+                    <div class="property-price">$ 800,000</div>
+                    <a href="#" class="btn-ver-mas">Ver más<i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Propiedad 3 -->
+            <div class="swiper-slide">
+              <div class="property-card">
+                <div class="property-image">
+                  <img src="assets/img/property3.jpg" alt="Galpón en alquiler">
+                  <span class="property-badge">Alquiler</span>
+                </div>
+                <div class="property-content">
+                  <h3>Galpón en alquiler - Coquimbito</h3>
+                  <p class="property-location">Castro barros y tropero sosa, Maipú, Mendoza</p>
+              
+                  <div class="property-features">
+                    <div class="feature">
+                      <i class="bi bi-house-door"></i>
+                      <span>-</span>
+                    </div>
+                    <div class="feature">
+                      <i class="bi bi-droplet"></i>
+                      <span>2 baños</span>
+                    </div>
+                    <div class="feature">
+                      <i class="bi bi-rulers"></i>
+                      <span>400 m²</span>
+                    </div>
+                  </div>
+
+                  <div class="property-footer">
+                    <div class="property-price">$ 1,300,000</div>
+                    <a href="#" class="btn-ver-mas">Ver más<i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Propiedad 4 -->
+            <div class="swiper-slide">
+              <div class="property-card">
+                <div class="property-image">
+                  <img src="assets/img/property4.jpg" alt="Venta depto">
+                  <span class="property-badge">Alquiler</span>
+                </div>
+                <div class="property-content">
+                  <h3>VENTA DEPTO - PALMARES</h3>
+                  <p class="property-location">Torre Eugenia, Palmares, Godoy Cruz, Mendoza</p>
+              
+                  <div class="property-features">
+                    <div class="feature">
+                      <i class="bi bi-house-door"></i>
+                      <span>2 hab</span>
+                    </div>
+                    <div class="feature">
+                      <i class="bi bi-droplet"></i>
+                      <span>2 baños</span>
+                    </div>
+                    <div class="feature">
+                      <i class="bi bi-rulers"></i>
+                      <span>73 m²</span>
+                    </div>
+                  </div>
+
+                  <div class="property-footer">
+                    <div class="property-price">USD 80,000</div>
+                    <a href="#" class="btn-ver-mas">Ver más<i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- Paginación -->
+          <div class="swiper-pagination"></div>
+          <!-- Navegación -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+      <a class="cta-btn" href="pages/propiedades.html" target="_blank">
+        Ver todas las propiedades
+      </a>
+     </div>
+    </section><!-- /Services Section -->
+
+    <!-- Tasaciones Section -->
+    <section id="tasaciones" class="tasaciones section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Tasaciones</h2>
+        <p>¿Por qué tasar con Scheurer Propiedades?</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-content">
+          <div class="row align-items-center">
+        
+            <!-- Columna Imagen -->
+            <div class="col-lg-6">
+              <div class="service-image">
+                <img src="assets/img/Edi.jpg" alt="Tasaciones de propiedades" class="img-fluid">
+              </div>
+            </div>
+
+            <!-- Columna Contenido -->
+            <div class="col-lg-6">
+              <div class="service-info">
+                <h3>Tasación Profesional de Propiedades</h3>
+                <p class="lead">Contamos con un equipo de profesionales especializados que realizan tasaciones precisas y confiables de todo tipo de propiedades.</p>
+            
+                <div class="service-features">
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div class="feature-text">
+                      <h4>Conocimiento real de cada corredor urbano, rural e industrial</h4>
+                      <p>No damos valores teóricos: trabajamos todos los días con propietarios, inversores y empresas de la zona.</p>
+                    </div>
+                  </div>
+              
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div class="feature-text">
+                      <h4>Experiencia comprobada desde 2007</h4>
+                      <p>Más de 18 años acompañando a familias y empresas en decisiones patrimoniales.</p>
+                    </div>
+                  </div>
+              
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div class="feature-text">
+                      <h4>Visión comercial y técnica</h4>
+                      <p>Realizamos estudios de mercado para ubicar y evaluar proyectos comerciales e industriales con datos reales y precisos.</p>
+                    </div>
+                  </div>
+              
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div class="feature-text">
+                      <h4>Confidencialidad y transparencia</h4>
+                      <p>Tu información se maneja con total privacidad y profesionalismo.</p>
+                    </div>
+                  </div>
+
+                  <div class="feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div class="feature-text">
+                      <h4>Tasaciones orientadas a resultados</h4>
+                      <p>Nuestro objetivo no es darte un número, sino ayudarte a tomar la mejor decisión para tu patrimonio.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <a href="https://wa.me/5492657123456?text=Hola,%20necesito%20una%20tasación" 
+                   target="_blank" 
+                   class="btn-service-whatsapp">
+                  <i class="bi bi-whatsapp"></i>
+                  <span>Solicitar Tasación</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section><!-- /Tasaciones Section -->
 
     <!-- Alquilar Section -->
     <section id="alquilar" class="alquilar section">
@@ -347,227 +660,93 @@
           <div class="swiper-button-next"></div>
         </div>
       </div>
+      <div class="text-center mt-4">
+      <a class="cta-btn" href="pages/propiedades.html" target="_blank">
+        Ver todas las propiedades
+      </a>
+     </div>
     </section><!-- /Alquilar Section -->
 
-    <!-- Stats Section -->
-    <!--<section id="stats" class="stats section light-background">
+  <!-- Administración Section -->
+    <section id="administracion" class="administracion section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+        <h2>Administración</h2>
+        <p>Gestionamos tu propiedad con profesionalismo y transparencia</p>
+        </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Happy Clients</strong> <span>consequuntur quae</span></p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <!--<div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Projects</strong> <span>adipisci atque cum quia aut</span></p>
-            </div>
-          <!--</div><!-- End Stats Item -->
-
-          <!--<div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hours Of Support</strong> <span>aut commodi quaerat</span></p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <!--<div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hard Workers</strong> <span>rerum asperiores dolor</span></p>
-            </div>
-          </div><!-- End Stats Item -->
-
-        <!--</div>
-
-      </div>-->
-
-    </section><!-- /Stats Section -->
-
-    <!-- Services Section -->
-    <section id="vender" class="alquilar section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Vender</h2>
-        <p>Descubrí las mejores propiedades en venta seleccionadas para vos</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper alquilar-swiper">
-          <div class="swiper-wrapper">
-
-            <!-- Propiedad 1 -->
-            <div class="swiper-slide">
-              <div class="property-card">
-                <div class="property-image">
-                  <img src="assets/img/property1.jpg" alt="Casa en venta">
-                  <span class="property-badge">Alquiler</span>
-                </div>
-                <div class="property-content">
-                  <h3>Casa en B° Brasil - Villa Hipódromo</h3>
-                  <p class="property-location">1082, Villa Mercedes, Barrio República del Brasil</p>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-content">
+            <div class="row align-items-center">
+        
+            <!-- Columna Contenido (invertido) -->
+            <div class="col-lg-6 order-lg-1 order-2">
+                <div class="service-info">
+                <h3>¿Qué incluye nuestro servicio?</h3>
+                <p class="lead">Nos encargamos de la gestión completa de tu propiedad para que vos te olvides de las preocupaciones.</p>
+            
+                <div class="service-features">
+                    <div class="feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div class="feature-text">
+                        <h4>Gestión de cobros y control de pagos</h4>
+                        <p>Nos encargamos de la cobranza mensual, verificación de cumplimiento y seguimiento inmediato ante cualquier atraso.</p>
+                    </div>
+                    </div>
+            
+                    <div class="feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div class="feature-text">
+                        <h4>Actualizaciones y normativa vigente</h4>
+                        <p>Aplicamos aumentos y ajustes según la legislación correspondiente, asegurando contratos ordenados y actualizados.</p>
+                    </div>
+                    </div>
               
-                  <div class="property-features">
-                    <div class="feature">
-                      <i class="bi bi-house-door"></i>
-                      <span>3 hab</span>
+                    <div class="feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div class="feature-text">
+                        <h4>Seguimiento integral del inquilino</h4>
+                        <p>Mantenemos contacto directo para resolver dudas, coordinar gestiones y garantizar una relación contractual fluida.</p>
                     </div>
-                    <div class="feature">
-                      <i class="bi bi-droplet"></i>
-                      <span>1 baño</span>
                     </div>
-                    <div class="feature">
-                      <i class="bi bi-rulers"></i>
-                      <span>125 m²</span>
-                    </div>
-                  </div>
-
-                  <div class="property-footer">
-                    <div class="property-price">USD 60,000</div>
-                    <a href="#" class="btn-ver-mas">Ver más<i class="bi bi-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Propiedad 2 -->
-            <div class="swiper-slide">
-              <div class="property-card">
-                <div class="property-image">
-                  <img src="assets/img/property2.jpg" alt="Alquilo depto">
-                  <span class="property-badge">Alquiler</span>
-                </div>
-                <div class="property-content">
-                  <h3>ALQUILO DEPTO - GODOY CRUZ</h3>
-                  <p class="property-location">Álvarez Thomas 515, Godoy Cruz</p>
               
-                  <div class="property-features">
-                    <div class="feature">
-                      <i class="bi bi-house-door"></i>
-                      <span>2 hab</span>
+                    <div class="feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div class="feature-text">
+                        <h4>Supervisión de impuestos, servicios y mantenimiento</h4>
+                        <p>Controlamos que todo esté al día, gestionamos reclamos y coordinamos reparaciones necesarias para cuidar la propiedad.</p>
                     </div>
-                    <div class="feature">
-                      <i class="bi bi-droplet"></i>
-                      <span>1 baño</span>
                     </div>
-                    <div class="feature">
-                      <i class="bi bi-rulers"></i>
-                      <span>264 m²</span>
-                    </div>
-                  </div>
 
-                  <div class="property-footer">
-                    <div class="property-price">$ 800,000</div>
-                    <a href="#" class="btn-ver-mas">Ver más<i class="bi bi-arrow-right"></i></a>
-                  </div>
+                    <div class="feature-item">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <div class="feature-text">
+                        <h4>Reportes claros al propietario</h4>
+                        <p>Brindamos informes periódicos con el estado de pagos, movimientos y novedades relevantes del alquiler.</p>
+                    </div>
+                    </div>
                 </div>
-              </div>
+
+                <a href="https://wa.me/5492657123456?text=Hola,%20necesito%20administración%20de%20propiedad" 
+                    target="_blank" 
+                    class="btn-service-whatsapp">
+                    <i class="bi bi-whatsapp"></i>
+                    <span>Solicitar Administración</span>
+                </a>
+                </div>
             </div>
 
-            <!-- Propiedad 3 -->
-            <div class="swiper-slide">
-              <div class="property-card">
-                <div class="property-image">
-                  <img src="assets/img/property3.jpg" alt="Galpón en alquiler">
-                  <span class="property-badge">Alquiler</span>
+            <!-- Columna Imagen (invertida) -->
+            <div class="col-lg-6 order-lg-2 order-1">
+                <div class="service-image">
+                <img src="assets/img/Edi.jpg" alt="Administración de propiedades" class="img-fluid">
                 </div>
-                <div class="property-content">
-                  <h3>Galpón en alquiler - Coquimbito</h3>
-                  <p class="property-location">Castro barros y tropero sosa, Maipú, Mendoza</p>
-              
-                  <div class="property-features">
-                    <div class="feature">
-                      <i class="bi bi-house-door"></i>
-                      <span>-</span>
-                    </div>
-                    <div class="feature">
-                      <i class="bi bi-droplet"></i>
-                      <span>2 baños</span>
-                    </div>
-                    <div class="feature">
-                      <i class="bi bi-rulers"></i>
-                      <span>400 m²</span>
-                    </div>
-                  </div>
-
-                  <div class="property-footer">
-                    <div class="property-price">$ 1,300,000</div>
-                    <a href="#" class="btn-ver-mas">Ver más<i class="bi bi-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
             </div>
 
-            <!-- Propiedad 4 -->
-            <div class="swiper-slide">
-              <div class="property-card">
-                <div class="property-image">
-                  <img src="assets/img/property4.jpg" alt="Venta depto">
-                  <span class="property-badge">Alquiler</span>
-                </div>
-                <div class="property-content">
-                  <h3>VENTA DEPTO - PALMARES</h3>
-                  <p class="property-location">Torre Eugenia, Palmares, Godoy Cruz, Mendoza</p>
-              
-                  <div class="property-features">
-                    <div class="feature">
-                      <i class="bi bi-house-door"></i>
-                      <span>2 hab</span>
-                    </div>
-                    <div class="feature">
-                      <i class="bi bi-droplet"></i>
-                      <span>2 baños</span>
-                    </div>
-                    <div class="feature">
-                      <i class="bi bi-rulers"></i>
-                      <span>73 m²</span>
-                    </div>
-                  </div>
-
-                  <div class="property-footer">
-                    <div class="property-price">USD 80,000</div>
-                    <a href="#" class="btn-ver-mas">Ver más<i class="bi bi-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
             </div>
-
-          </div>
-          <!-- Paginación -->
-          <div class="swiper-pagination"></div>
-          <!-- Navegación -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
         </div>
-      </div>
-    </section><!-- /Services Section -->
-
-    <!-- Call To Action Section -->
-    <section id="call-to-action" class="call-to-action section dark-background">
-
-      <img src="assets/img/cta-bg.jpg" alt="">
-
-      <div class="container">
-        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-xl-10">
-            <div class="text-center">
-              <h3>Call To Action</h3>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <a class="cta-btn" href="#">Call To Action</a>
-            </div>
-          </div>
         </div>
-      </div>
+    </section><!-- /Administración Section -->
 
     </section><!-- /Call To Action Section -->
 
@@ -587,149 +766,8 @@
       </div>
     </section><!-- /Banner Section -->
 
-  <!-- Team Section -->
-  <section id="team" class="team section">
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Nuestro Equipo</h2>
-      <p>Profesionales comprometidos en brindarte el mejor servicio inmobiliario</p>
-    </div><!-- End Section Title -->
-
-    <div class="container">
-      <div class="row gy-4">
-
-        <!-- Team Member 1 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="team-card">
-            <div class="team-card-inner">
-              <div class="member-photo">
-                <img src="assets/img/team/team-1.jpg" alt="Walter White">
-              </div>
-              <div class="member-details">
-                <h4>Walter White</h4>
-                <span class="member-position">Director Ejecutivo</span>
-                <div class="social-links">
-                  <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-                  <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                  <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- End Team Member -->
-
-        <!-- Team Member 2 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="team-card">
-            <div class="team-card-inner">
-              <div class="member-photo">
-                <img src="assets/img/team/team-2.jpg" alt="Sarah Johnson">
-              </div>
-              <div class="member-details">
-                <h4>Sarah Johnson</h4>
-                <span class="member-position">Gerente de Ventas</span>
-                <div class="social-links">
-                  <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-                  <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                  <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- End Team Member -->
-
-        <!-- Team Member 3 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="team-card">
-            <div class="team-card-inner">
-              <div class="member-photo">
-                <img src="assets/img/team/team-3.jpg" alt="William Anderson">
-              </div>
-              <div class="member-details">
-                <h4>William Anderson</h4>
-                <span class="member-position">Asesor Inmobiliario</span>
-                <div class="social-links">
-                  <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-                  <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                  <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- End Team Member -->
-
-        <!-- Team Member 4 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-          <div class="team-card">
-            <div class="team-card-inner">
-              <div class="member-photo">
-                <img src="assets/img/team/team-4.jpg" alt="Amanda Jepson">
-              </div>
-              <div class="member-details">
-                <h4>Amanda Jepson</h4>
-                <span class="member-position">Contadora</span>
-                <div class="social-links">
-                  <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-                  <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                  <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- End Team Member -->
-
-        <!-- Team Member 5 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-          <div class="team-card">
-            <div class="team-card-inner">
-              <div class="member-photo">
-                <img src="assets/img/team/team-5.jpg" alt="John Doe">
-              </div>
-              <div class="member-details">
-                <h4>John Doe</h4>
-                <span class="member-position">Asesor Legal</span>
-                <div class="social-links">
-                  <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-                  <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                  <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- End Team Member -->
-
-        <!-- Team Member 6 -->
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-          <div class="team-card">
-            <div class="team-card-inner">
-              <div class="member-photo">
-                <img src="assets/img/team/team-6.jpg" alt="Jane Smith">
-              </div>
-              <div class="member-details">
-                <h4>Jane Smith</h4>
-                <span class="member-position">Marketing Digital</span>
-                <div class="social-links">
-                  <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-                  <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                  <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- End Team Member -->
-
-      </div>
-    </div>
-  </section><!-- /Team Section -->
-
     <!-- Faq Section -->
-    <section id="faq" class="faq section light-background">
+    <!-- <section id="faq" class="faq section light-background">
 
       <div class="container">
 
@@ -755,7 +793,7 @@
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
-              <div class="faq-item">
+              <!--<div class="faq-item">
                 <h3><span class="num">2.</span> <span>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</span></h3>
                 <div class="faq-content">
                   <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
@@ -763,7 +801,7 @@
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
-              <div class="faq-item">
+              <!--<div class="faq-item">
                 <h3><span class="num">3.</span> <span>Dolor sit amet consectetur adipiscing elit pellentesque?</span></h3>
                 <div class="faq-content">
                   <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
@@ -771,7 +809,7 @@
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
-              <div class="faq-item">
+              <!--<div class="faq-item">
                 <h3><span class="num">4.</span> <span>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</span></h3>
                 <div class="faq-content">
                   <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
@@ -779,7 +817,7 @@
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
-              <div class="faq-item">
+              <!--<div class="faq-item">
                 <h3><span class="num">5.</span> <span>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</span></h3>
                 <div class="faq-content">
                   <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
@@ -787,17 +825,17 @@
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
-            </div>
+            <!--</div>
 
           </div>
         </div>
 
       </div>
 
-    </section><!-- /Faq Section -->
+    </section> --> <!-- /Faq Section -->
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
+    <section id="contacto" class="contact section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -902,33 +940,11 @@
           </a>
           <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
           <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
           </div>
-        </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
         </div>
 
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
@@ -940,17 +956,6 @@
           <p><strong>Email:</strong> <span>info@example.com</span></p>
         </div>
 
-      </div>
-    </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Scheurer</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
 
