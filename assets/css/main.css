@@ -1657,6 +1657,11 @@ section,
   box-shadow: 0 2px 8px rgba(221, 140, 17, 0.3);
   /* Sin transiciones que puedan causar parpadeo */
 }
+/* Property Badge - Venta */
+.alquilar .property-badge.venta {
+  background-color: #2563eb; /* Azul */
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
+}
 
 /* Property Content */
 .alquilar .property-content {
@@ -4165,4 +4170,14 @@ footer .social-links a {
   .contact-link i {
     font-size: 1.1rem;
   }
+}
+
+.share-btn-modern.instagram {
+  background: linear-gradient(
+    135deg,
+    #f58529,
+    #dd2a7b,
+    #8134af,
+    #515bd4
+  );
 }
