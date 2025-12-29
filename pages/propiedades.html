@@ -81,6 +81,7 @@
                 <option value="terreno">Terreno</option>
                 <option value="local">Local Comercial</option>
                 <option value="oficina">Oficina</option>
+                <option value="galpon">Galpón</option>
               </select>
             </div>
 
@@ -96,6 +97,8 @@
                 <option value="ciudad">Ciudad</option>
                 <option value="guaymallen">Guaymallén</option>
                 <option value="corralito">Corralito</option>
+                <option value="sexta">Sexta Sección</option>
+                <option value="maipu">Maipú</option>
                 <!-- Agregar más ubicaciones aquí -->
               </select>
             </div>
@@ -311,49 +314,96 @@
 
            <!-- Property Item 4 -->
           <div class="property-item" 
-               data-operacion="alquiler" 
+               data-operacion="venta" 
                data-tipo="casa" 
-               data-ubicacion="test" 
-               data-habitaciones="4" 
-               data-banos="2" 
+               data-ubicacion="sexta" 
+               data-habitaciones="6" 
+               data-banos="1" 
                data-cochera="si" 
-               data-superficie="180">
-            <a href="propiedad-detalle.html" class="property-link">
+               data-superficie="90">
+            <a href="casaSextaSeccion.html" class="property-link" target="_blank">
               <div class="property-item-image">
                 <img src="../assets/img/property3.jpg" alt="Casa en alquiler">
-                <span class="property-item-badge alquiler">Alquiler</span>
+                <span class="property-item-badge venta">venta</span>
               </div>
               <div class="property-item-content">
                 <div class="property-item-header">
-                  <h3>Casa Amplia con Jardín</h3>
-                  <span class="property-item-price">USD 95,000</span>
+                  <h3>Casa Sexta sección</h3>
+                  <span class="property-item-price">USD 88,000</span>
                 </div>
                 <p class="property-item-location">
                   <i class="bi bi-geo-alt"></i>
-                  Test, Mendoza
+                  Sexta sección, Mendoza
                 </p>
                 <div class="property-item-features">
                   <span class="feature-chip">
                     <i class="bi bi-house-door"></i>
-                    4 hab
+                    6 hab
                   </span>
                   <span class="feature-chip">
                     <i class="bi bi-droplet"></i>
-                    2 baños
+                    1 baños
                   </span>
                   <span class="feature-chip">
                     <i class="bi bi-rulers"></i>
-                    180 m²
+                    90 m²
                   </span>
                   <span class="feature-chip">
                     <i class="bi bi-car-front"></i>
-                    2 cocheras
+                    1 cocheras
                   </span>
                 </div>
               </div>
             </a>
           </div>
           <!-- End Property Item -->
+
+          <!-- Property Item 4 -->
+          <div class="property-item" 
+               data-operacion="alquiler" 
+               data-tipo="galpon" 
+               data-ubicacion="maipu" 
+               data-habitaciones="1" 
+               data-banos="1" 
+               data-cochera="si" 
+               data-superficie="270">
+            <a href="alquilerGalponGustavo.html" class="property-link" target="_blank">
+              <div class="property-item-image">
+                <img src="../assets/img/Propiedades/GalponGustavo/img(4).jpg" alt="Casa en venta">
+                <span class="property-item-badge alquiler">Alquiler</span>
+              </div>
+              <div class="property-item-content">
+                <div class="property-item-header">
+                  <h3>Galpón Gustavo</h3>
+                  <span class="property-item-price">1.300.000</span>
+                </div>
+                <p class="property-item-location">
+                  <i class="bi bi-geo-alt"></i>
+                  Maipú, Mendoza
+                </p>
+                <div class="property-item-features">
+                  <span class="feature-chip">
+                    <i class="bi bi-house-door"></i>
+                    1 Oficina
+                  </span>
+                  <span class="feature-chip">
+                    <i class="bi bi-droplet"></i>
+                    1 baño
+                  </span>
+                  <span class="feature-chip">
+                    <i class="bi bi-rulers"></i>
+                    270 m²
+                  </span>
+                  <span class="feature-chip">
+                    <i class="bi bi-car-front"></i>
+                    1 cocheras
+                  </span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- End Property Item -->
+
 
         </div>
 
