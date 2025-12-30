@@ -1,300 +1,293 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Casa y Depto | Scheurer Propiedades</title>
-  
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
-  
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  
-  <!-- CSS Principal -->
-  <link rel="stylesheet" href="../assets/css/main.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casa y Depto | Scheurer Propiedades</title>
 
-  <!-- Header Simple -->
-  <header class="property-header-nav">
-    <div class="container">
-      <a href="../index.html" class="back-home">
-        <i class="bi bi-arrow-left"></i>
-        <span>Volver al Inicio</span>
-      </a>
-      <div class="logo">
-        <img src="../assets/img/Logos/LogoConNombreNegro.png" alt="Scheurer Propiedades">
-      </div>
-    </div>
-  </header>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link rel="icon" type="image/png" href="../assets/img/favicon.ico" />
 
-  <main class="main">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <!-- Property Detail Section -->
-    <section id="property-detail" class="property-detail section">
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+  <body>
+    <!-- Header Simple -->
+    <header class="property-header-nav">
       <div class="container">
-        
-        <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb" class="property-breadcrumb" data-aos="fade-up">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
-
-            <li class="breadcrumb-item">
-              <i class="bi bi-chevron-right"></i>
-              <a href="../pages/propiedades.html">Propiedades</a>
-            </li>
-
-            <li class="breadcrumb-item active">
-              <i class="bi bi-chevron-right"></i>
-              Casa y Departamento Godoy Cruz
-            </li>
-          </ol>
-        </nav>
-
-        <div class="row gy-4">
-          
-<!-- Columna Izquierda - Galería e Info -->
-<div class="col-lg-8">
-
-  <!-- Galería de Imágenes Vertical -->
-  <div class="property-gallery" data-aos="fade-up">
-    
-    <!-- Badge -->
-    <span class="property-badge-detail venta">Venta</span>
-    
-    <div class="property-gallery-container">
-      <!-- Miniaturas a la izquierda -->
-      <div class="property-gallery-thumbs-vertical">
-        <div class="gallery-thumb active" data-index="0">
-          <img src="../assets/img/Propiedades/CasaDeptoGodoyCruz/img(1).jpeg" alt="Vista 1">
-        </div>
-        <div class="gallery-thumb" data-index="1">
-          <img src="../assets/img/Propiedades/CasaDeptoGodoyCruz/img(2).jpeg" alt="Vista 2">
-        </div>
-        <div class="gallery-thumb" data-index="2">
-          <img src="../assets/img/Propiedades/CasaDeptoGodoyCruz/img(3).jpeg" alt="Vista 3">
-        </div>
-        <div class="gallery-thumb" data-index="3">
-          <img src="../assets/img/Propiedades/CasaDeptoGodoyCruz/img(4).jpeg" alt="Vista 4">
-        </div>
-        <div class="gallery-thumb" data-index="4">
-          <img src="../assets/img/Propiedades/CasaDeptoGodoyCruz/img(5).jpeg" alt="Vista 5">
-        </div>
-        <div class="gallery-thumb" data-index="5">
-          <img src="../assets/img/Propiedades/CasaDeptoGodoyCruz/img(6).jpeg" alt="Vista 6">
-        </div>
-        <div class="gallery-thumb" data-index="6">
-          <img src="../assets/img/Propiedades/CasaDeptoGodoyCruz/img(7).jpeg" alt="Vista 7">
+        <a href="../index.html" class="back-home">
+          <i class="bi bi-arrow-left"></i>
+          <span>Volver al Inicio</span>
+        </a>
+        <div class="logo">
+          <img src="../assets/img/Logos/LogoConNombreNegro.png" alt="Scheurer Propiedades" />
         </div>
       </div>
+    </header>
 
-      <!-- Imagen principal a la derecha -->
-      <div class="property-gallery-main">
-        <div class="gallery-main-image">
-          <img id="mainGalleryImage" src="../assets/img/Propiedades/CasaDeptoGodoyCruz/img(1).jpeg" alt="Vista principal">
-        </div>
+    <main class="main">
+      <!-- Property Detail Section -->
+      <section id="property-detail" class="property-detail section">
+        <div class="container">
+          <!-- Breadcrumb -->
+          <nav aria-label="breadcrumb" class="property-breadcrumb" data-aos="fade-up">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
 
-        <!-- Controles de navegación -->
-        <div class="gallery-nav-buttons">
-          <button class="gallery-nav-btn" id="prevImage">
-            <i class="bi bi-chevron-left"></i>
-          </button>
-          <button class="gallery-nav-btn" id="nextImage">
-            <i class="bi bi-chevron-right"></i>
-          </button>
-        </div>
+              <li class="breadcrumb-item">
+                <i class="bi bi-chevron-right"></i>
+                <a href="../pages/propiedades.html">Propiedades</a>
+              </li>
 
-        <!-- Contador -->
-        <div class="gallery-counter">
-          <span id="currentImage">1</span> / <span id="totalImages">8</span>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-  <!-- /Galería de Imágenes -->
-            <!-- Título y Ubicación -->
-            <div class="property-header" data-aos="fade-up">
-              <h1>Casa y Departamento Godoy Cruz</h1>
-              <p class="property-address">
-                <i class="bi bi-geo-alt"></i>
-                Rioja 2525 Godoy Cruz
-              </p>
-            </div>
+              <li class="breadcrumb-item active">
+                <i class="bi bi-chevron-right"></i>
+                Casa y Departamento Godoy Cruz
+              </li>
+            </ol>
+          </nav>
 
-            <!-- Características Principales -->
-            <div class="property-main-features" data-aos="fade-up">
-              <div class="feature-box">
-                <i class="bi bi-bounding-box"></i>
-                <div class="feature-info">
-                  <span class="feature-value">150</span>
-                  <span class="feature-label">m² cubiertos</span>
-                </div>
-              </div>
-              <div class="feature-box">
-                <i class="bi bi-arrows-fullscreen"></i>
-                <div class="feature-info">
-                  <span class="feature-value">170</span>
-                  <span class="feature-label">m² totales</span>
-                </div>
-              </div>
-              <div class="feature-box">
-                <i class="bi bi-house-door"></i>
-                <div class="feature-info">
-                  <span class="feature-value">2</span>
-                  <span class="feature-label">Habitaciones por unidad</span>
-                </div>
-              </div>
-              <div class="feature-box">
-                <i class="bi bi-droplet"></i>
-                <div class="feature-info">
-                  <span class="feature-value">3</span>
-                  <span class="feature-label">Baños: 2 unidad principal, 1 departamento</span>
-                </div>
-              </div>
-              <div class="feature-box">
-                <i class="bi bi-car-front"></i>
-                <div class="feature-info">
-                  <span class="feature-value">1</span>
-                  <span class="feature-label">Cochera</span>
-                </div>
-              </div>
-            </div>
+          <div class="row gy-4">
+            <!-- Columna Izquierda - Galería e Info -->
+            <div class="col-lg-8">
+              <!-- Galería de Imágenes Vertical -->
+              <div class="property-gallery" data-aos="fade-up">
+                <!-- Badge -->
+                <span class="property-badge-detail venta">Venta</span>
 
-            <!-- Descripción -->
-            <div class="property-description" data-aos="fade-up">
-              <h2>Descripción de la Propiedad</h2>
-              <p>Propiedad con dos departamentos independientes, ubicada sobre calle Rioja a metros de Av. Revolución de Mayo, desarrollada sobre un terreno de 170 m². La vivienda principal cuenta con 2 dormitorios y 2 baños, mientras que el segundo departamento dispone de 2 dormitorios y 1 baño, ideal para renta.</p>
-              
-
-              <h3>Características Destacadas</h3>
-              <ul class="features-list">
-                <li><i class="bi bi-check-circle"></i> Casa principal con 2 dormitorios</li>
-                <li><i class="bi bi-check-circle"></i> 2 baños en vivienda principal</li>
-                <li><i class="bi bi-check-circle"></i> Living comedor</li>
-                <li><i class="bi bi-check-circle"></i> Cocina</li>
-                <li><i class="bi bi-check-circle"></i> Lavandería independiente</li>
-                <li><i class="bi bi-check-circle"></i> Gas natural</li>
-                <li><i class="bi bi-check-circle"></i> Cochera techada</li>
-                <li><i class="bi bi-check-circle"></i> Segundo departamento independiente de 2 dormitorios y 1 baño</li>
-              </ul>
-            </div>
-
-            <!-- Detalles Adicionales -->
-            <div class="property-details-grid" data-aos="fade-up">
-              <h2>Detalles de la Propiedad</h2>
-              <div class="details-grid">
-                <div class="detail-item">
-                  <span class="detail-label">Tipo:</span>
-                  <span class="detail-value">Casa y Departamento</span>
-                </div>
-                <div class="detail-item">
-                  <span class="detail-label">Operación:</span>
-                  <span class="detail-value">Venta</span>
-                </div>
-                <div class="detail-item">
-                  <span class="detail-label">Superficie total:</span>
-                  <span class="detail-value">170 m²</span>
-                </div>
-                <div class="detail-item">
-                  <span class="detail-label">Superficie cubierta:</span>
-                  <span class="detail-value">150 m²</span>
-                </div>
-                <div class="detail-item">
-                  <span class="detail-label">Dormitorios:</span>
-                  <span class="detail-value">2 por unidad</span>
-                </div>
-                <div class="detail-item">
-                  <span class="detail-label">Baños:</span>
-                  <span class="detail-value">3</span>
-                </div>
-                <div class="detail-item">
-                  <span class="detail-label">Cocheras:</span>
-                  <span class="detail-value">1</span>
-                </div>
-                <div class="detail-item">
-                  <span class="detail-label">Antigüedad:</span>
-                  <span class="detail-value">8 años</span>
-                </div>
-                <div class="detail-item">
-                  <span class="detail-label">Expensas:</span>
-                  <span class="detail-value">No tiene</span>
-                </div>
-                <div class="detail-item">
-                  <span class="detail-label">Estado:</span>
-                  <span class="detail-value">Muy bueno</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Ubicación -->
-            <div class="property-location-map" data-aos="fade-up">
-              <h2>Ubicación</h2>
-              <div class="map-container">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.048187308489!2d-68.8754062!3d-32.9062961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e09bc2d56d3e1%3A0x8f1920440f8f3aeb!2sRioja%202525%2C%20Godoy%20Cruz%2C%20Mendoza!5e0!3m2!1ses!2sar!4v20251229"
-                  width="100%" 
-                  height="400" 
-                  style="border:0; border-radius: 12px;" 
-                  allowfullscreen="" 
-                  loading="lazy">
-                </iframe>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Columna Derecha - Precio, Agente y Compartir -->
-          <div class="col-lg-4">
-            
-            <!-- Card de Precio -->
-            <div class="property-price-card" data-aos="fade-up">
-              <div class="price-header">
-                <span class="price-label">Precio</span>
-                <span class="price-value">USD 37.000</span>
-              </div>
-            </div>
-
-            <!-- Card de Agente -->
-            <div class="property-agent-card-modern" data-aos="fade-up" data-aos-delay="100">
-              <div class="agent-header">
-                <img src="../assets/img/team/team-1.jpg" alt="Walter White" class="agent-avatar">
-                <div class="agent-info-main">
-                  <h3>Walter White</h3>
-                  <p>Director Ejecutivo</p>
-                </div>
-              </div>
-              
-              <div class="agent-contact-modern">
-                <a href="https://wa.me/5492657123456?text=Hola,%20me%20interesa%20la%20propiedad%20Casa%20en%20B°%20Brasil" class="whatsapp-btn" target="_blank">
-                  <i class="bi bi-whatsapp"></i>
-                  <div class="btn-text">
-                    <span class="btn-label">Consultar por WhatsApp</span>
-                    <span class="btn-number">+54 9 2657 123456</span>
+                <div class="property-gallery-container">
+                  <!-- Miniaturas a la izquierda -->
+                  <div class="property-gallery-thumbs-vertical">
+                    <div class="gallery-thumb active" data-index="0">
+                      <img src="../assets/img/Propiedades/CasaDeptoGodoyCruz/img(1).jpeg" alt="Vista 1" />
+                    </div>
+                    <div class="gallery-thumb" data-index="1">
+                      <img src="../assets/img/Propiedades/CasaDeptoGodoyCruz/img(2).jpeg" alt="Vista 2" />
+                    </div>
+                    <div class="gallery-thumb" data-index="2">
+                      <img src="../assets/img/Propiedades/CasaDeptoGodoyCruz/img(3).jpeg" alt="Vista 3" />
+                    </div>
+                    <div class="gallery-thumb" data-index="3">
+                      <img src="../assets/img/Propiedades/CasaDeptoGodoyCruz/img(4).jpeg" alt="Vista 4" />
+                    </div>
+                    <div class="gallery-thumb" data-index="4">
+                      <img src="../assets/img/Propiedades/CasaDeptoGodoyCruz/img(5).jpeg" alt="Vista 5" />
+                    </div>
+                    <div class="gallery-thumb" data-index="5">
+                      <img src="../assets/img/Propiedades/CasaDeptoGodoyCruz/img(6).jpeg" alt="Vista 6" />
+                    </div>
+                    <div class="gallery-thumb" data-index="6">
+                      <img src="../assets/img/Propiedades/CasaDeptoGodoyCruz/img(7).jpeg" alt="Vista 7" />
+                    </div>
                   </div>
-                </a>
+
+                  <!-- Imagen principal a la derecha -->
+                  <div class="property-gallery-main">
+                    <div class="gallery-main-image">
+                      <img id="mainGalleryImage" src="../assets/img/Propiedades/CasaDeptoGodoyCruz/img(1).jpeg" alt="Vista principal" />
+                    </div>
+
+                    <!-- Controles de navegación -->
+                    <div class="gallery-nav-buttons">
+                      <button class="gallery-nav-btn" id="prevImage">
+                        <i class="bi bi-chevron-left"></i>
+                      </button>
+                      <button class="gallery-nav-btn" id="nextImage">
+                        <i class="bi bi-chevron-right"></i>
+                      </button>
+                    </div>
+
+                    <!-- Contador -->
+                    <div class="gallery-counter">
+                      <span id="currentImage">1</span> / <span id="totalImages">8</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Galería de Imágenes -->
+
+              <!-- Título y Ubicación -->
+              <div class="property-header" data-aos="fade-up">
+                <h1>Casa y Departamento Godoy Cruz</h1>
+                <p class="property-address">
+                  <i class="bi bi-geo-alt"></i>
+                  Rioja 2525 Godoy Cruz
+                </p>
               </div>
 
-              <div class="agent-other-contact">
-                <a href="tel:+5492657123456" class="contact-link">
-                  <i class="bi bi-telephone"></i>
-                  <span>+54 9 2657 123456</span>
-                </a>
-                <a href="mailto:info@scheurer.com" class="contact-link">
-                  <i class="bi bi-envelope"></i>
-                  <span>info@scheurer.com</span>
-                </a>
+              <!-- Características Principales -->
+              <div class="property-main-features" data-aos="fade-up">
+                <div class="feature-box">
+                  <i class="bi bi-bounding-box"></i>
+                  <div class="feature-info">
+                    <span class="feature-value">150</span>
+                    <span class="feature-label">m² cubiertos</span>
+                  </div>
+                </div>
+                <div class="feature-box">
+                  <i class="bi bi-arrows-fullscreen"></i>
+                  <div class="feature-info">
+                    <span class="feature-value">170</span>
+                    <span class="feature-label">m² totales</span>
+                  </div>
+                </div>
+                <div class="feature-box">
+                  <i class="bi bi-house-door"></i>
+                  <div class="feature-info">
+                    <span class="feature-value">2</span>
+                    <span class="feature-label">Habitaciones por unidad</span>
+                  </div>
+                </div>
+                <div class="feature-box">
+                  <i class="bi bi-droplet"></i>
+                  <div class="feature-info">
+                    <span class="feature-value">3</span>
+                    <span class="feature-label">Baños: 2 unidad principal, 1 departamento</span>
+                  </div>
+                </div>
+                <div class="feature-box">
+                  <i class="bi bi-car-front"></i>
+                  <div class="feature-info">
+                    <span class="feature-value">1</span>
+                    <span class="feature-label">Cochera</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Descripción -->
+              <div class="property-description" data-aos="fade-up">
+                <h2>Descripción de la Propiedad</h2>
+                <p>
+                  Propiedad con dos departamentos independientes, ubicada sobre calle Rioja a metros de Av. Revolución de Mayo, desarrollada sobre un terreno de 170 m². La vivienda principal cuenta con 2 dormitorios y 2 baños, mientras que el segundo departamento dispone de 2 dormitorios y 1 baño, ideal para renta.
+                </p>
+
+                <h3>Características Destacadas</h3>
+                <ul class="features-list">
+                  <li><i class="bi bi-check-circle"></i> Casa principal con 2 dormitorios</li>
+                  <li><i class="bi bi-check-circle"></i> 2 baños en vivienda principal</li>
+                  <li><i class="bi bi-check-circle"></i> Living comedor</li>
+                  <li><i class="bi bi-check-circle"></i> Cocina</li>
+                  <li><i class="bi bi-check-circle"></i> Lavandería independiente</li>
+                  <li><i class="bi bi-check-circle"></i> Gas natural</li>
+                  <li><i class="bi bi-check-circle"></i> Cochera techada</li>
+                  <li><i class="bi bi-check-circle"></i> Segundo departamento independiente de 2 dormitorios y 1 baño</li>
+                </ul>
+              </div>
+
+              <!-- Detalles Adicionales -->
+              <div class="property-details-grid" data-aos="fade-up">
+                <h2>Detalles de la Propiedad</h2>
+                <div class="details-grid">
+                  <div class="detail-item">
+                    <span class="detail-label">Tipo:</span>
+                    <span class="detail-value">Casa y Departamento</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Operación:</span>
+                    <span class="detail-value">Venta</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Superficie total:</span>
+                    <span class="detail-value">170 m²</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Superficie cubierta:</span>
+                    <span class="detail-value">150 m²</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Dormitorios:</span>
+                    <span class="detail-value">2 por unidad</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Baños:</span>
+                    <span class="detail-value">3</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Cocheras:</span>
+                    <span class="detail-value">1</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Antigüedad:</span>
+                    <span class="detail-value">8 años</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Expensas:</span>
+                    <span class="detail-value">No tiene</span>
+                  </div>
+                  <div class="detail-item">
+                    <span class="detail-label">Estado:</span>
+                    <span class="detail-value">Muy bueno</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Ubicación -->
+              <div class="property-location-map" data-aos="fade-up">
+                <h2>Ubicación</h2>
+                <div class="map-container">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.048187308489!2d-68.8754062!3d-32.9062961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e09bc2d56d3e1%3A0x8f1920440f8f3aeb!2sRioja%202525%2C%20Godoy%20Cruz%2C%20Mendoza!5e0!3m2!1ses!2sar!4v20251229"
+                    width="100%"
+                    height="400"
+                    style="border:0; border-radius: 12px;"
+                    allowfullscreen=""
+                    loading="lazy"
+                  ></iframe>
+                </div>
               </div>
             </div>
 
-            <!-- Card de Compartir Moderna -->
-            <div class="property-share-card-modern" data-aos="fade-up" data-aos-delay="200">
-              <h3>
-                <i class="bi bi-share"></i>
-                Compartir Propiedad
-              </h3>
+            <!-- Columna Derecha - Precio, Agente y Compartir -->
+            <div class="col-lg-4">
+              <!-- Card de Precio -->
+              <div class="property-price-card" data-aos="fade-up">
+                <div class="price-header">
+                  <span class="price-label">Precio</span>
+                  <span class="price-value">USD 37.000</span>
+                </div>
+              </div>
+
+              <!-- Card de Agente -->
+              <div class="property-agent-card-modern" data-aos="fade-up" data-aos-delay="100">
+                <div class="agent-header">
+                  <img src="../assets/img/team/team-1.jpg" alt="Walter White" class="agent-avatar" />
+                  <div class="agent-info-main">
+                    <h3>Walter White</h3>
+                    <p>Director Ejecutivo</p>
+                  </div>
+                </div>
+
+                <div class="agent-contact-modern">
+                  <a href="https://wa.me/5492657123456?text=Hola,%20me%20interesa%20la%20propiedad%20Casa%20en%20B°%20Brasil" class="whatsapp-btn" target="_blank">
+                    <i class="bi bi-whatsapp"></i>
+                    <div class="btn-text">
+                      <span class="btn-label">Consultar por WhatsApp</span>
+                      <span class="btn-number">+54 9 2657 123456</span>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="agent-other-contact">
+                  <a href="tel:+5492657123456" class="contact-link">
+                    <i class="bi bi-telephone"></i>
+                    <span>+54 9 2657 123456</span>
+                  </a>
+                  <a href="mailto:info@scheurer.com" class="contact-link">
+                    <i class="bi bi-envelope"></i>
+                    <span>info@scheurer.com</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Card de Compartir Moderna -->
+              <div class="property-share-card-modern" data-aos="fade-up" data-aos-delay="200">
+                <h3>
+                  <i class="bi bi-share"></i>
+                  Compartir Propiedad
+                </h3>
                 <div class="share-buttons-modern">
                   <a href="#" class="share-btn-modern facebook" onclick="shareOnFacebook(); return false;">
                     <i class="bi bi-facebook"></i>
@@ -306,33 +299,27 @@
                     <span>Instagram</span>
                   </a>
                 </div>
+              </div>
             </div>
-
           </div>
-
         </div>
-      </div>
-    </section><!-- /Property Detail Section -->
+      </section>
+      <!-- /Property Detail Section -->
+    </main>
 
-  </main>
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+      <!-- Tu footer aquí -->
+    </footer>
 
-  <!-- Footer -->
-  <footer id="footer" class="footer">
-    <!-- Tu footer aquí -->
-  </footer>
+    <!-- Main Template JS -->
+    <script src="../assets/js/main.js"></script>
 
-  <!-- Main Template JS -->
-<script src="../assets/js/main.js"></script>
-
-<!-- Scripts de compartir redes sociales -->
+    <!-- Scripts de compartir redes sociales -->
     <script>
       function shareOnFacebook() {
         const url = encodeURIComponent(window.location.href);
-        window.open(
-          `https://www.facebook.com/sharer/sharer.php?u=${url}`,
-          '_blank',
-          'width=600,height=400'
-        );
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'width=600,height=400');
       }
 
       function shareOnInstagram() {
@@ -345,5 +332,5 @@
         });
       }
     </script>
-</body>
+  </body>
 </html>

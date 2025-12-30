@@ -1,434 +1,527 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Propiedades | Scheurer Propiedades</title>
-  
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
-  
-  <!-- CSS Principal -->
-  <link rel="stylesheet" href="../assets/css/main.css">
-  <link rel="stylesheet" href="../assets/css/propiedades.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades | Scheurer Propiedades</title>
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/propiedades.css">
+  </head>
+  <body>
 
-  <!-- Header Simple -->
-  <header class="property-header-nav">
-    <div class="container">
-      <a href="../index.html" class="back-home">
-        <i class="bi bi-arrow-left"></i>
-        <span>Volver al Inicio</span>
-      </a>
-      <div class="logo">
-        <img src="../assets/img/logo.png" alt="Scheurer Propiedades">
-      </div>
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Properties List Section -->
-    <section id="propiedades-list" class="propiedades-list section">
+    <!-- Header Simple -->
+    <header class="property-header-nav">
       <div class="container">
-        
-        <!-- Page Title -->
-        <div class="page-header" data-aos="fade-up">
-          <h1>Propiedades Disponibles</h1>
-          <p>Encuentra tu propiedad ideal entre nuestras opciones disponibles</p>
+        <a href="../index.html" class="back-home">
+          <i class="bi bi-arrow-left"></i>
+          <span>Volver al Inicio</span>
+        </a>
+        <div class="logo">
+          <img src="../assets/img/logo.png" alt="Scheurer Propiedades">
         </div>
+      </div>
+    </header>
 
-        <!-- Filters Section -->
-        <div class="filters-container" data-aos="fade-up">
-          <div class="filters-header">
-            <h3>
-              <i class="bi bi-funnel"></i>
-              Filtrar Propiedades
-            </h3>
-            <button class="btn-reset-filters" id="resetFilters">
-              <i class="bi bi-arrow-clockwise"></i>
+    <main class="main">
+
+      <!-- Properties List Section -->
+      <section id="propiedades-list" class="propiedades-list section">
+        <div class="container">
+          
+          <!-- Page Title -->
+          <div class="page-header" data-aos="fade-up">
+            <h1>Propiedades Disponibles</h1>
+            <p>Encuentra tu propiedad ideal entre nuestras opciones disponibles</p>
+          </div>
+
+          <!-- Filters Section -->
+          <div class="filters-container" data-aos="fade-up">
+            <div class="filters-header">
+              <h3>
+                <i class="bi bi-funnel"></i>
+                Filtrar Propiedades
+              </h3>
+              <button class="btn-reset-filters" id="resetFilters">
+                <i class="bi bi-arrow-clockwise"></i>
+                Limpiar Filtros
+              </button>
+            </div>
+
+            <div class="filters-grid">
+              
+              <!-- Filtro: Tipo de Operación -->
+              <div class="filter-group">
+                <label class="filter-label">
+                  <i class="bi bi-tag"></i>
+                  Operación
+                </label>
+                <select class="filter-select" id="filterOperacion">
+                  <option value="">Todas</option>
+                  <option value="venta">Venta</option>
+                  <option value="alquiler">Alquiler</option>
+                </select>
+              </div>
+
+              <!-- Filtro: Tipo de Propiedad -->
+              <div class="filter-group">
+                <label class="filter-label">
+                  <i class="bi bi-house"></i>
+                  Tipo
+                </label>
+                <select class="filter-select" id="filterTipo">
+                  <option value="">Todos</option>
+                  <option value="casa">Casa</option>
+                  <option value="departamento">Departamento</option>
+                  <option value="terreno">Terreno</option>
+                  <option value="local">Local Comercial</option>
+                  <option value="oficina">Oficina</option>
+                  <option value="galpon">Galpón</option>
+                </select>
+              </div>
+
+              <!-- Filtro: Ubicación -->
+              <div class="filter-group">
+                <label class="filter-label">
+                  <i class="bi bi-geo-alt"></i>
+                  Ubicación
+                </label>
+                <select class="filter-select" id="filterUbicacion">
+                  <option value="">Todas</option>
+                  <option value="godoy-cruz">Godoy Cruz</option>
+                  <option value="ciudad">Ciudad</option>
+                  <option value="guaymallen">Guaymallén</option>
+                  <option value="corralito">Corralito</option>
+                  <option value="sexta">Sexta Sección</option>
+                  <option value="maipu">Maipú</option>
+                  <option value="rodeo">Rodeo del Medio</option>
+                  <option value="lasheras">Las Heras</option>
+                  <!-- Agregar más ubicaciones aquí -->
+                </select>
+              </div>
+
+              <!-- Filtro: Habitaciones -->
+              <!--<div class="filter-group">
+                <label class="filter-label">
+                  <i class="bi bi-door-open"></i>
+                  Habitaciones
+                </label>
+                <select class="filter-select" id="filterHabitaciones">
+                  <option value="">Todas</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4+</option>
+                </select>
+              </div> -->
+
+              <!-- Filtro: Baños -->
+              <!--<div class="filter-group">
+                <label class="filter-label">
+                  <i class="bi bi-droplet"></i>
+                  Baños
+                </label>
+                <select class="filter-select" id="filterBanos">
+                  <option value="">Todos</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3+</option>
+                </select>
+              </div> -->
+
+              <!-- Filtro: Cochera -->
+              <!--<div class="filter-group">
+                <label class="filter-label">
+                  <i class="bi bi-car-front"></i>
+                  Cochera
+                </label>
+                <select class="filter-select" id="filterCochera">
+                  <option value="">Todas</option>
+                  <option value="si">Con cochera</option>
+                  <option value="no">Sin cochera</option>
+                </select>
+              </div> -->
+
+              <!-- Filtro: Superficie -->
+              <!--<div class="filter-group">
+                <label class="filter-label">
+                  <i class="bi bi-rulers"></i>
+                  Superficie
+                </label>
+                <select class="filter-select" id="filterSuperficie">
+                  <option value="">Todas</option>
+                  <option value="0-50">Hasta 50 m²</option>
+                  <option value="50-100">50 - 100 m²</option>
+                  <option value="100-150">100 - 150 m²</option>
+                  <option value="150-200">150 - 200 m²</option>
+                  <option value="200">Más de 200 m²</option>
+                </select>
+              </div> -->
+
+            </div>
+          </div>
+
+          <!-- Results Counter -->
+          <div class="results-info" data-aos="fade-up">
+            <p class="results-count">
+              <span id="resultsCount">0</span> propiedades encontradas
+            </p>
+          </div>
+
+          <!-- Properties Grid -->
+          <div class="properties-grid" id="propertiesGrid">
+            
+            <!-- Property Item 1 - TEMPLATE -->
+            <div class="property-item" 
+                 data-operacion="venta" 
+                 data-tipo="casa" 
+                 data-ubicacion="corralito" 
+                 data-habitaciones="3" 
+                 data-banos="1" 
+                 data-cochera="si" 
+                 data-superficie="125">
+              <a href="casaCorralitos.html" class="property-link" target="_blank">
+                <div class="property-item-image">
+                  <img src="../assets/img/Propiedades/CasaCorralitos/img(8).jpg" alt="Casa en venta">
+                  <span class="property-item-badge venta">Venta</span>
+                </div>
+                <div class="property-item-content">
+                  <div class="property-item-header">
+                    <h3>Casa en Corralitos</h3>
+                    <span class="property-item-price">USD 185.000</span>
+                  </div>
+                  <p class="property-item-location">
+                    <i class="bi bi-geo-alt"></i>
+                    Corralito, Mendoza
+                  </p>
+                  <div class="property-item-features">
+                    <span class="feature-chip">
+                      <i class="bi bi-house-door"></i>
+                      3 hab
+                    </span>
+                    <span class="feature-chip">
+                      <i class="bi bi-droplet"></i>
+                      2 baño
+                    </span>
+                    <span class="feature-chip">
+                      <i class="bi bi-rulers"></i>
+                      283 m²
+                    </span>
+                    <span class="feature-chip">
+                      <i class="bi bi-car-front"></i>
+                      3 cochera
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- End Property Item -->
+
+            <!-- Property Item 2 -->
+            <div class="property-item" 
+                 data-operacion="venta" 
+                 data-tipo="departamento" 
+                 data-ubicacion="godoy-cruz" 
+                 data-habitaciones="2" 
+                 data-banos="3" 
+                 data-cochera="si" 
+                 data-superficie="150">
+              <a href="casaDeptoGodoyCruz.html" class="property-link" target="_blank">
+                <div class="property-item-image">
+                  <img src="../assets/img/Propiedades/CasaDeptoGodoyCruz/img(4).jpeg" alt="Departamento en venta">
+                  <span class="property-item-badge venta">Venta</span>
+                </div>
+                <div class="property-item-content">
+                  <div class="property-item-header">
+                    <h3>Depto/casa Godoy Cruz</h3>
+                    <span class="property-item-price">USD 37,000</span>
+                  </div>
+                  <p class="property-item-location">
+                    <i class="bi bi-geo-alt"></i>
+                    Godoy Cruz, Mendoza
+                  </p>
+                  <div class="property-item-features">
+                    <span class="feature-chip">
+                      <i class="bi bi-house-door"></i>
+                      2 hab
+                    </span>
+                    <span class="feature-chip">
+                      <i class="bi bi-droplet"></i>
+                      3 baño
+                    </span>
+                    <span class="feature-chip">
+                      <i class="bi bi-rulers"></i>
+                      150 m²
+                    </span>
+                    <span class="feature-chip">
+                      <i class="bi bi-car-front"></i>
+                      1 cochera
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- End Property Item -->
+
+            <!-- Property Item 3 -->
+            <div class="property-item" 
+                 data-operacion="alquiler" 
+                 data-tipo="oficina" 
+                 data-ubicacion="ciudad" 
+                 data-habitaciones="6" 
+                 data-banos="1" 
+                 data-cochera="no" 
+                 data-superficie="180">
+              <a href="alquiler9DeJulio.html" class="property-link" target="_blank">
+                <div class="property-item-image">
+                  <img src="../assets/img/Propiedades/Oficina9DeJulio/img(4).png" alt="oficina en alquiler">
+                  <span class="property-item-badge alquiler">Alquiler</span>
+                </div>
+                <div class="property-item-content">
+                  <div class="property-item-header">
+                    <h3>Oficinas centro</h3>
+                    <span class="property-item-price">650.000</span>
+                  </div>
+                  <p class="property-item-location">
+                    <i class="bi bi-geo-alt"></i>
+                    Ciudad, Mendoza
+                  </p>
+                  <div class="property-item-features">
+                    <span class="feature-chip">
+                      <i class="bi bi-house-door"></i>
+                      6 oficinas
+                    </span>
+                    <span class="feature-chip">
+                      <i class="bi bi-droplet"></i>
+                      1 baños
+                    </span>
+                    <span class="feature-chip">
+                      <i class="bi bi-rulers"></i>
+                      180 m²
+                    </span>
+                    <span class="feature-chip">
+                      <i class="bi bi-car-front"></i>
+                      0 cocheras
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- End Property Item -->
+
+            <!-- Property Item 4 -->
+            <div class="property-item" 
+                 data-operacion="venta" 
+                 data-tipo="casa" 
+                 data-ubicacion="sexta" 
+                 data-habitaciones="6" 
+                 data-banos="1" 
+                 data-cochera="si" 
+                 data-superficie="90">
+              <a href="casaSextaSeccion.html" class="property-link" target="_blank">
+                <div class="property-item-image">
+                  <img src="../assets/img/property3.jpg" alt="Casa en alquiler">
+                  <span class="property-item-badge venta">venta</span>
+                </div>
+                <div class="property-item-content">
+                  <div class="property-item-header">
+                    <h3>Casa Sexta sección</h3>
+                    <span class="property-item-price">USD 88,000</span>
+                  </div>
+                  <p class="property-item-location">
+                    <i class="bi bi-geo-alt"></i>
+                    Sexta sección, Mendoza
+                  </p>
+                  <div class="property-item-features">
+                    <span class="feature-chip">
+                      <i class="bi bi-house-door"></i>
+                      6 hab
+                    </span>
+                    <span class="feature-chip">
+                      <i class="bi bi-droplet"></i>
+                      1 baños
+                    </span>
+                    <span class="feature-chip">
+                      <i class="bi bi-rulers"></i>
+                      90 m²
+                    </span>
+                    <span class="feature-chip">
+                      <i class="bi bi-car-front"></i>
+                      1 cocheras
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- End Property Item -->
+
+            <!-- Property Item 5 -->
+            <div class="property-item" 
+                 data-operacion="alquiler" 
+                 data-tipo="galpon" 
+                 data-ubicacion="maipu" 
+                 data-habitaciones="1" 
+                 data-banos="1" 
+                 data-cochera="si" 
+                 data-superficie="270">
+              <a href="alquilerGalponGustavo.html" class="property-link" target="_blank">
+                <div class="property-item-image">
+                  <img src="../assets/img/Propiedades/GalponGustavo/img(4).jpg" alt="Casa en venta">
+                  <span class="property-item-badge alquiler">Alquiler</span>
+                </div>
+                <div class="property-item-content">
+                  <div class="property-item-header">
+                    <h3>Galpón Gustavo</h3>
+                    <span class="property-item-price">1.300.000</span>
+                  </div>
+                  <p class="property-item-location">
+                    <i class="bi bi-geo-alt"></i>
+                    Maipú, Mendoza
+                  </p>
+                  <div class="property-item-features">
+                    <span class="feature-chip">
+                      <i class="bi bi-house-door"></i>
+                      1 Oficina
+                    </span>
+                    <span class="feature-chip">
+                      <i class="bi bi-droplet"></i>
+                      1 baño
+                    </span>
+                    <span class="feature-chip">
+                      <i class="bi bi-rulers"></i>
+                      270 m²
+                    </span>
+                    <span class="feature-chip">
+                      <i class="bi bi-car-front"></i>
+                      1 cocheras
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- End Property Item -->
+
+            <!-- Property Item 6 -->
+            <div class="property-item" 
+                 data-operacion="alquiler" 
+                 data-tipo="galpon" 
+                 data-ubicacion="rodeo" 
+                 data-habitaciones="0" 
+                 data-banos="0" 
+                 data-cochera="no" 
+                 data-superficie="800">
+              <a href="alquilerGalponRodeo.html" class="property-link" target="_blank">
+                <div class="property-item-image">
+                  <img src="../assets/img/Propiedades/GalponRodeo/img(4).jpeg" alt="Casa en venta">
+                  <span class="property-item-badge alquiler">Alquiler</span>
+                </div>
+                <div class="property-item-content">
+                  <div class="property-item-header">
+                    <h3>Galpón Rodeo del Medio</h3>
+                    <span class="property-item-price">USD 4.000</span>
+                  </div>
+                  <p class="property-item-location">
+                    <i class="bi bi-geo-alt"></i>
+                    Rodeo del Medio, Mendoza
+                  </p>
+                  <div class="property-item-features">
+                    <span class="feature-chip">
+                      <i class="bi bi-house-door"></i>
+                      0 Oficina
+                    </span>
+                    <span class="feature-chip">
+                      <i class="bi bi-droplet"></i>
+                      0 baño
+                    </span>
+                    <span class="feature-chip">
+                      <i class="bi bi-rulers"></i>
+                      800 m²
+                    </span>
+                    <span class="feature-chip">
+                      <i class="bi bi-car-front"></i>
+                      0 cocheras
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- End Property Item -->
+
+            <!-- Property Item 7 -->
+            <div class="property-item" 
+                 data-operacion="venta" 
+                 data-tipo="casa" 
+                 data-ubicacion="lasheras" 
+                 data-habitaciones="3" 
+                 data-banos="1" 
+                 data-cochera="si" 
+                 data-superficie="65">
+              <a href="casaLasHeras.html" class="property-link" target="_blank">
+                <div class="property-item-image">
+                  <img src="../assets/img/Propiedades/CasaLasHeras/img(4).jpg" alt="Casa en venta">
+                  <span class="property-item-badge venta">venta</span>
+                </div>
+                <div class="property-item-content">
+                  <div class="property-item-header">
+                    <h3>Casa Las Heras</h3>
+                    <span class="property-item-price">USD 35.000</span>
+                  </div>
+                  <p class="property-item-location">
+                    <i class="bi bi-geo-alt"></i>
+                    Las Heras, Mendoza
+                  </p>
+                  <div class="property-item-features">
+                    <span class="feature-chip">
+                      <i class="bi bi-house-door"></i>
+                      3 hab
+                    </span>
+                    <span class="feature-chip">
+                      <i class="bi bi-droplet"></i>
+                      1 baños
+                    </span>
+                    <span class="feature-chip">
+                      <i class="bi bi-rulers"></i>
+                      65 m²
+                    </span>
+                    <span class="feature-chip">
+                      <i class="bi bi-car-front"></i>
+                      1 cocheras
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- End Property Item -->
+
+          </div>
+
+          <!-- No Results Message -->
+          <div class="no-results" id="noResults" style="display: none;">
+            <i class="bi bi-search"></i>
+            <h3>No se encontraron propiedades</h3>
+            <p>Intenta ajustar los filtros para ver más resultados</p>
+            <button class="btn-reset" onclick="document.getElementById('resetFilters').click()">
               Limpiar Filtros
             </button>
           </div>
 
-          <div class="filters-grid">
-            
-            <!-- Filtro: Tipo de Operación -->
-            <div class="filter-group">
-              <label class="filter-label">
-                <i class="bi bi-tag"></i>
-                Operación
-              </label>
-              <select class="filter-select" id="filterOperacion">
-                <option value="">Todas</option>
-                <option value="venta">Venta</option>
-                <option value="alquiler">Alquiler</option>
-              </select>
-            </div>
-
-            <!-- Filtro: Tipo de Propiedad -->
-            <div class="filter-group">
-              <label class="filter-label">
-                <i class="bi bi-house"></i>
-                Tipo
-              </label>
-              <select class="filter-select" id="filterTipo">
-                <option value="">Todos</option>
-                <option value="casa">Casa</option>
-                <option value="departamento">Departamento</option>
-                <option value="terreno">Terreno</option>
-                <option value="local">Local Comercial</option>
-                <option value="oficina">Oficina</option>
-                <option value="galpon">Galpón</option>
-              </select>
-            </div>
-
-            <!-- Filtro: Ubicación -->
-            <div class="filter-group">
-              <label class="filter-label">
-                <i class="bi bi-geo-alt"></i>
-                Ubicación
-              </label>
-              <select class="filter-select" id="filterUbicacion">
-                <option value="">Todas</option>
-                <option value="godoy-cruz">Godoy Cruz</option>
-                <option value="ciudad">Ciudad</option>
-                <option value="guaymallen">Guaymallén</option>
-                <option value="corralito">Corralito</option>
-                <option value="sexta">Sexta Sección</option>
-                <option value="maipu">Maipú</option>
-                <!-- Agregar más ubicaciones aquí -->
-              </select>
-            </div>
-
-            <!-- Filtro: Habitaciones -->
-            <!--<div class="filter-group">
-              <label class="filter-label">
-                <i class="bi bi-door-open"></i>
-                Habitaciones
-              </label>
-              <select class="filter-select" id="filterHabitaciones">
-                <option value="">Todas</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4+</option>
-              </select>
-            </div> -->
-
-            <!-- Filtro: Baños -->
-            <!--<div class="filter-group">
-              <label class="filter-label">
-                <i class="bi bi-droplet"></i>
-                Baños
-              </label>
-              <select class="filter-select" id="filterBanos">
-                <option value="">Todos</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3+</option>
-              </select>
-            </div> -->
-
-            <!-- Filtro: Cochera -->
-            <!--<div class="filter-group">
-              <label class="filter-label">
-                <i class="bi bi-car-front"></i>
-                Cochera
-              </label>
-              <select class="filter-select" id="filterCochera">
-                <option value="">Todas</option>
-                <option value="si">Con cochera</option>
-                <option value="no">Sin cochera</option>
-              </select>
-            </div> -->
-
-            <!-- Filtro: Superficie -->
-            <!--<div class="filter-group">
-              <label class="filter-label">
-                <i class="bi bi-rulers"></i>
-                Superficie
-              </label>
-              <select class="filter-select" id="filterSuperficie">
-                <option value="">Todas</option>
-                <option value="0-50">Hasta 50 m²</option>
-                <option value="50-100">50 - 100 m²</option>
-                <option value="100-150">100 - 150 m²</option>
-                <option value="150-200">150 - 200 m²</option>
-                <option value="200">Más de 200 m²</option>
-              </select>
-            </div> -->
-
-          </div>
         </div>
+      </section><!-- /Properties List Section -->
 
-        <!-- Results Counter -->
-        <div class="results-info" data-aos="fade-up">
-          <p class="results-count">
-            <span id="resultsCount">0</span> propiedades encontradas
-          </p>
-        </div>
+    </main>
 
-        <!-- Properties Grid -->
-        <div class="properties-grid" id="propertiesGrid">
-          
-          <!-- Property Item 1 - TEMPLATE -->
-          <div class="property-item" 
-               data-operacion="venta" 
-               data-tipo="casa" 
-               data-ubicacion="corralito" 
-               data-habitaciones="3" 
-               data-banos="1" 
-               data-cochera="si" 
-               data-superficie="125">
-            <a href="casaCorralitos.html" class="property-link" target="_blank">
-              <div class="property-item-image">
-                <img src="../assets/img/Propiedades/CasaCorralitos/img(8).jpg" alt="Casa en venta">
-                <span class="property-item-badge venta">Venta</span>
-              </div>
-              <div class="property-item-content">
-                <div class="property-item-header">
-                  <h3>Casa en Corralitos</h3>
-                  <span class="property-item-price">USD 185.000</span>
-                </div>
-                <p class="property-item-location">
-                  <i class="bi bi-geo-alt"></i>
-                  Corralito, Mendoza
-                </p>
-                <div class="property-item-features">
-                  <span class="feature-chip">
-                    <i class="bi bi-house-door"></i>
-                    3 hab
-                  </span>
-                  <span class="feature-chip">
-                    <i class="bi bi-droplet"></i>
-                    2 baño
-                  </span>
-                  <span class="feature-chip">
-                    <i class="bi bi-rulers"></i>
-                    283 m²
-                  </span>
-                  <span class="feature-chip">
-                    <i class="bi bi-car-front"></i>
-                    3 cochera
-                  </span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <!-- End Property Item -->
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+      <!-- Tu footer aquí -->
+    </footer>
 
-          <!-- Property Item 2 -->
-          <div class="property-item" 
-               data-operacion="venta" 
-               data-tipo="departamento" 
-               data-ubicacion="godoy-cruz" 
-               data-habitaciones="2" 
-               data-banos="3" 
-               data-cochera="si" 
-               data-superficie="150">
-            <a href="casaDeptoGodoyCruz.html" class="property-link" target="_blank">
-              <div class="property-item-image">
-                <img src="../assets/img/Propiedades/CasaDeptoGodoyCruz/img(4).jpeg" alt="Departamento en venta">
-                <span class="property-item-badge venta">Venta</span>
-              </div>
-              <div class="property-item-content">
-                <div class="property-item-header">
-                  <h3>Depto/casa Godoy Cruz</h3>
-                  <span class="property-item-price">USD 37,000</span>
-                </div>
-                <p class="property-item-location">
-                  <i class="bi bi-geo-alt"></i>
-                  Godoy Cruz, Mendoza
-                </p>
-                <div class="property-item-features">
-                  <span class="feature-chip">
-                    <i class="bi bi-house-door"></i>
-                    2 hab
-                  </span>
-                  <span class="feature-chip">
-                    <i class="bi bi-droplet"></i>
-                    3 baño
-                  </span>
-                  <span class="feature-chip">
-                    <i class="bi bi-rulers"></i>
-                    150 m²
-                  </span>
-                   <span class="feature-chip">
-                    <i class="bi bi-car-front"></i>
-                    1 cochera
-                  </span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <!-- End Property Item -->
+    <!-- JavaScript -->
+    <script src="../assets/js/propiedades.js"></script>
 
-          <!-- Property Item 3 -->
-          <div class="property-item" 
-               data-operacion="alquiler" 
-               data-tipo="oficina" 
-               data-ubicacion="ciudad" 
-               data-habitaciones="6" 
-               data-banos="1" 
-               data-cochera="no" 
-               data-superficie="180">
-            <a href="alquiler9DeJulio.html" class="property-link" target="_blank">
-              <div class="property-item-image">
-                <img src="../assets/img/Propiedades/Oficina9DeJulio/img(4).png" alt="oficina en alquiler">
-                <span class="property-item-badge alquiler">Alquiler</span>
-              </div>
-              <div class="property-item-content">
-                <div class="property-item-header">
-                  <h3>Oficinas centro</h3>
-                  <span class="property-item-price">650.000</span>
-                </div>
-                <p class="property-item-location">
-                  <i class="bi bi-geo-alt"></i>
-                  Ciudad, Mendoza
-                </p>
-                <div class="property-item-features">
-                  <span class="feature-chip">
-                    <i class="bi bi-house-door"></i>
-                    6 oficinas
-                  </span>
-                  <span class="feature-chip">
-                    <i class="bi bi-droplet"></i>
-                    1 baños
-                  </span>
-                  <span class="feature-chip">
-                    <i class="bi bi-rulers"></i>
-                    180 m²
-                  </span>
-                  <span class="feature-chip">
-                    <i class="bi bi-car-front"></i>
-                    0 cocheras
-                  </span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <!-- End Property Item -->
-
-           <!-- Property Item 4 -->
-          <div class="property-item" 
-               data-operacion="venta" 
-               data-tipo="casa" 
-               data-ubicacion="sexta" 
-               data-habitaciones="6" 
-               data-banos="1" 
-               data-cochera="si" 
-               data-superficie="90">
-            <a href="casaSextaSeccion.html" class="property-link" target="_blank">
-              <div class="property-item-image">
-                <img src="../assets/img/property3.jpg" alt="Casa en alquiler">
-                <span class="property-item-badge venta">venta</span>
-              </div>
-              <div class="property-item-content">
-                <div class="property-item-header">
-                  <h3>Casa Sexta sección</h3>
-                  <span class="property-item-price">USD 88,000</span>
-                </div>
-                <p class="property-item-location">
-                  <i class="bi bi-geo-alt"></i>
-                  Sexta sección, Mendoza
-                </p>
-                <div class="property-item-features">
-                  <span class="feature-chip">
-                    <i class="bi bi-house-door"></i>
-                    6 hab
-                  </span>
-                  <span class="feature-chip">
-                    <i class="bi bi-droplet"></i>
-                    1 baños
-                  </span>
-                  <span class="feature-chip">
-                    <i class="bi bi-rulers"></i>
-                    90 m²
-                  </span>
-                  <span class="feature-chip">
-                    <i class="bi bi-car-front"></i>
-                    1 cocheras
-                  </span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <!-- End Property Item -->
-
-          <!-- Property Item 4 -->
-          <div class="property-item" 
-               data-operacion="alquiler" 
-               data-tipo="galpon" 
-               data-ubicacion="maipu" 
-               data-habitaciones="1" 
-               data-banos="1" 
-               data-cochera="si" 
-               data-superficie="270">
-            <a href="alquilerGalponGustavo.html" class="property-link" target="_blank">
-              <div class="property-item-image">
-                <img src="../assets/img/Propiedades/GalponGustavo/img(4).jpg" alt="Casa en venta">
-                <span class="property-item-badge alquiler">Alquiler</span>
-              </div>
-              <div class="property-item-content">
-                <div class="property-item-header">
-                  <h3>Galpón Gustavo</h3>
-                  <span class="property-item-price">1.300.000</span>
-                </div>
-                <p class="property-item-location">
-                  <i class="bi bi-geo-alt"></i>
-                  Maipú, Mendoza
-                </p>
-                <div class="property-item-features">
-                  <span class="feature-chip">
-                    <i class="bi bi-house-door"></i>
-                    1 Oficina
-                  </span>
-                  <span class="feature-chip">
-                    <i class="bi bi-droplet"></i>
-                    1 baño
-                  </span>
-                  <span class="feature-chip">
-                    <i class="bi bi-rulers"></i>
-                    270 m²
-                  </span>
-                  <span class="feature-chip">
-                    <i class="bi bi-car-front"></i>
-                    1 cocheras
-                  </span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <!-- End Property Item -->
-
-
-        </div>
-
-        <!-- No Results Message -->
-        <div class="no-results" id="noResults" style="display: none;">
-          <i class="bi bi-search"></i>
-          <h3>No se encontraron propiedades</h3>
-          <p>Intenta ajustar los filtros para ver más resultados</p>
-          <button class="btn-reset" onclick="document.getElementById('resetFilters').click()">
-            Limpiar Filtros
-          </button>
-        </div>
-
-      </div>
-    </section><!-- /Properties List Section -->
-
-  </main>
-
-  <!-- Footer -->
-  <footer id="footer" class="footer">
-    <!-- Tu footer aquí -->
-  </footer>
-
-  <!-- JavaScript -->
-  <script src="../assets/js/propiedades.js"></script>
-
-</body>
+  </body>
 </html>
