@@ -2891,23 +2891,42 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+
+/* Fuerza mismas alturas en columnas internas */
+.contact .row > div {
+  display: flex;
+}
+
+/* Cards de información */
 .contact .info-item {
   background: color-mix(in srgb, var(--default-color), transparent 96%);
   padding: 30px;
+
+  /* CLAVE */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
+/* Íconos */
 .contact .info-item i {
   font-size: 38px;
-  line-height: 0;
+  line-height: 1;
   color: var(--accent-color);
+  margin-bottom: 12px;
 }
 
+/* Títulos */
 .contact .info-item h3 {
   font-size: 20px;
   font-weight: 700;
-  margin: 20px 0 10px 0;
+  margin: 10px 0;
+  min-height: 28px; /* evita saltos */
 }
 
+/* Texto */
 .contact .info-item p {
   padding: 0;
   line-height: 24px;
@@ -2915,12 +2934,30 @@ section,
   margin-bottom: 0;
 }
 
+/* Empuja el texto hacia abajo si hay menos contenido */
+.contact .info-item p:last-child {
+  margin-top: auto;
+}
+
+/* Altura mínima solo en desktop */
+@media (min-width: 992px) {
+  .contact .info-item {
+    min-height: 220px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Contact Form
+--------------------------------------------------------------*/
+
 .contact .php-email-form {
   background: color-mix(in srgb, var(--default-color), transparent 96%);
   padding: 30px;
+  width: 100%;
   height: 100%;
 }
 
+/* Inputs */
 .contact .php-email-form input[type=text],
 .contact .php-email-form input[type=email],
 .contact .php-email-form textarea {
@@ -2933,18 +2970,22 @@ section,
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
+/* Focus */
 .contact .php-email-form input[type=text]:focus,
 .contact .php-email-form input[type=email]:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--accent-color);
+  outline: none;
 }
 
+/* Placeholder */
 .contact .php-email-form input[type=text]::placeholder,
 .contact .php-email-form input[type=email]::placeholder,
 .contact .php-email-form textarea::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
+/* Botón */
 .contact .php-email-form button[type=submit] {
   background: var(--accent-color);
   color: var(--contrast-color);
@@ -2952,12 +2993,12 @@ section,
   padding: 10px 30px;
   transition: 0.4s;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
-
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
