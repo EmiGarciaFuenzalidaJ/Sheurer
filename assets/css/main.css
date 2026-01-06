@@ -3806,55 +3806,72 @@ footer .social-links a {
   white-space: nowrap;
 }
 
-/* WhatsApp Button */
+/* ===============================
+   WhatsApp Button (FIXED)
+   =============================== */
+
 .agent-contact-modern {
   padding: 24px;
   background: linear-gradient(135deg, #25D366, #1ebe57);
+  overflow: hidden; /* CLAVE: evita cortes visuales */
 }
 
+/* Botón */
 .whatsapp-btn {
   display: flex;
   align-items: center;
   gap: 16px;
+
   width: 100%;
+  box-sizing: border-box;
+
   padding: 16px 20px;
+
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 12px;
+
   text-decoration: none;
-  color: white;
-  transition: all 0.3s ease;
+  color: #fff;
+
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
+/* Hover */
 .whatsapp-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.28);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 }
 
+/* Icono */
 .whatsapp-btn i {
   font-size: 2.5rem;
   flex-shrink: 0;
+  line-height: 1;
 }
 
+/* Texto */
 .btn-text {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
   flex: 1;
   min-width: 0;
 }
 
+/* Label */
 .btn-label {
   font-family: var(--nav-font);
   font-weight: 600;
   font-size: 1.05rem;
   line-height: 1.2;
-  white-space: normal;
-  word-wrap: break-word;
 }
 
+/* Número */
 .btn-number {
   font-family: var(--default-font);
   font-size: 0.9rem;
@@ -3864,7 +3881,10 @@ footer .social-links a {
   text-overflow: ellipsis;
 }
 
-/* Otros contactos */
+/* ===============================
+   Otros contactos (sin cambios)
+   =============================== */
+
 .agent-other-contact {
   display: flex;
   flex-direction: column;
@@ -3901,7 +3921,6 @@ footer .social-links a {
 .contact-link:hover i {
   color: var(--contrast-color);
 }
-
 /* ================================
    CARD DE COMPARTIR MODERNA
    ================================ */
